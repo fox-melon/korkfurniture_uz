@@ -1,0 +1,19 @@
+.main {
+  min-height: 80vh;
+  .banner {
+    height: 400px;
+    position: relative;
+    .text {
+      position: absolute;
+      top: 300px;
+      left: 200px;
+      font-size: 28px;
+      font-weight: 600;
+      z-index: 9;
+      color: #fff;
+    }
+  }
+  .img {
+    width: 50%;
+  }
+}

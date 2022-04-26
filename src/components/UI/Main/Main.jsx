@@ -2,15 +2,34 @@ import Image from 'next/image'
 import styles from './Main.module.scss'
 import useTranslation from 'next-translate/useTranslation'
 import { Button } from '@mui/material'
+import { createPost, getPosts } from 'services'
+import { useEffect, useState } from 'react'
 
 export function Main() {
   const { t } = useTranslation('common')
-  console.log(process.env.NEXT_PUBLIC_BASE_URL)
+  const [posts, setPosts] = useState([])
+
+  useEffect(() => {
+    getPosts({ limit: 10, page: 1 }).then((res) => {
+      setPosts(res)
+    })
+  }, [])
+
+  const addPost = () => {
+    createPost(
+      JSON.stringify({
+        title: 'foo',
+        body: 'bar',
+        userId: 1,
+      })
+    ).then((res) => {
+      console.log('create')
+    })
+  }
+
+  console.log(posts)
   return (
     <main className={styles.main}>
-      <Button size='large' color='primary'>
-        Button
-      </Button>
       {/* next image
             https://nextjs.org/docs/api-reference/next/image
         */}
@@ -18,9 +37,8 @@ export function Main() {
         <div className={styles.text}>{t('greeting')}</div>
         <Image
           src='/images/airplain.jpg'
-          width='100%'
-          height='100%'
           objectFit='cover'
+          priority={true}
           alt='airplain'
           layout='fill'
         />
@@ -38,6 +56,14 @@ export function Main() {
           objectFit='cover'
           layout='responsive'
         />
+      </div>
+      <Button size='large' color='primary' onClick={addPost}>
+        Create post
+      </Button>
+      <div>
+        {posts.map((item) => (
+          <div key={item.id}>{item.title}</div>
+        ))}
       </div>
     </main>
   )

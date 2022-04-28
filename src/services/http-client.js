@@ -5,7 +5,7 @@ const cookies = parseCookies()
 
 export const request = axios.create({
   baseURL: process.env.NEXT_PUBLIC_BASE_URL,
-  headers: {
-    Authorization: cookies.ACCESS_TOKEN,
-  },
+  // headers: {
+  //   Authorization: cookies.ACCESS_TOKEN,
+  // },
 })

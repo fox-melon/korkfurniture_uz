@@ -27,7 +27,6 @@ export function Main() {
     })
   }
 
-  console.log(posts)
   return (
     <main className={styles.main}>
       {/* next image

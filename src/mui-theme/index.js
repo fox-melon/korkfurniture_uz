@@ -22,6 +22,9 @@ export default createTheme({
       styleOverrides: {
         root: {
           backgroundColor: 'red',
+          '&:hover': {
+            color: 'black',
+          },
         },
       },
     },

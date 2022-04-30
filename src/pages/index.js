@@ -1,11 +1,24 @@
 import { Main } from 'components/UI/Main/Main'
 import SEO from 'seo'
+import { fetchMultipleUrls } from 'services/fetchMultipleUrls'
 
-export default function Home() {
+export default function Home({ data }) {
+  console.log('data===>', data)
   return (
     <>
       <SEO />
       <Main />
     </>
   )
+}
+
+export async function getServerSideProps(context) {
+  const urls = ['/posts']
+  const data = await fetchMultipleUrls(urls)
+
+  return {
+    props: {
+      data,
+    },
+  }
 }

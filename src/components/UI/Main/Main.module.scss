@@ -1,13 +1,15 @@
+@import 'styles/unit.scss';
+
 .main {
   min-height: 80vh;
   .banner {
-    height: 400px;
+    height: rem(400);
     position: relative;
     .text {
       position: absolute;
-      top: 300px;
-      left: 200px;
-      font-size: 28px;
+      top: rem(300);
+      left: rem(200);
+      font-size: rem(28);
       font-weight: 600;
       z-index: 9;
       color: #fff;

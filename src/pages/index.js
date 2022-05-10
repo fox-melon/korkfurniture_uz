@@ -3,7 +3,6 @@ import SEO from 'seo'
 import { fetchMultipleUrls } from 'services/fetchMultipleUrls'
 
 export default function Home({ data }) {
-  console.log('data===>', data)
   return (
     <>
       <SEO />

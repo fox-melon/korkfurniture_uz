@@ -4,6 +4,7 @@ import useTranslation from 'next-translate/useTranslation'
 import { Button } from '@mui/material'
 import { createPost, getPosts } from 'services'
 import { useEffect, useState } from 'react'
+import { Counter } from '../Counter/Counter'
 
 export function Main() {
   const { t } = useTranslation('common')
@@ -42,6 +43,8 @@ export function Main() {
           layout='fill'
         />
       </div>
+
+      <Counter />
 
       {/* next image domain config
             https://nextjs.org/docs/basic-features/image-optimization#domains

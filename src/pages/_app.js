@@ -9,13 +9,21 @@ import { PersistGate } from 'redux-persist/integration/react'
 function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
+      {typeof window !== 'undefined' ? (
+        <PersistGate loading={null} persistor={persistor}>
+          <ThemeProvider theme={theme}>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </ThemeProvider>
+        </PersistGate>
+      ) : (
         <ThemeProvider theme={theme}>
           <Layout>
             <Component {...pageProps} />
           </Layout>
         </ThemeProvider>
-      </PersistGate>
+      )}
     </Provider>
   )
 }

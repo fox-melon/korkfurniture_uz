@@ -18,11 +18,13 @@ function MyApp({ Component, pageProps }) {
           </ThemeProvider>
         </PersistGate>
       ) : (
-        <ThemeProvider theme={theme}>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </ThemeProvider>
+        <div>
+          <ThemeProvider theme={theme}>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </ThemeProvider>
+        </div>
       )}
     </Provider>
   )

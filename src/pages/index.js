@@ -3,6 +3,7 @@ import SEO from 'components/SEO'
 import { fetchMultipleUrls } from 'services/fetchMultipleUrls'
 
 export default function Home({ data }) {
+  console.log('prr=>', process.env.NEXT_PUBLIC_TEST)
   return (
     <>
       <SEO />
@@ -17,7 +18,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      data,
-    },
+      data
+    }
   }
 }

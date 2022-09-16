@@ -1,6 +1,6 @@
 import { Container } from '@mui/material'
 import Link from 'next/link'
-import styles from './Blog.module.scss'
+import styles from './style.module.scss'
 
 export function BlogList() {
   return (

@@ -1,15 +1,15 @@
 import Image from 'next/image'
-import styles from './Main.module.scss'
+import styles from './style.module.scss'
 import useTranslation from 'next-translate/useTranslation'
 import { Button } from '@mui/material'
 import { createPost, getPosts } from 'services'
 import { useEffect, useState } from 'react'
 import { Counter } from '../Counter/Counter'
-
+import classNames from 'classnames'
 export function Main() {
   const { t } = useTranslation('common')
   const [posts, setPosts] = useState([])
-
+  const [active, setActive] = useState(false)
   useEffect(() => {
     getPosts({ limit: 10, page: 1 }).then((res) => {
       setPosts(res)
@@ -21,7 +21,7 @@ export function Main() {
       JSON.stringify({
         title: 'foo',
         body: 'bar',
-        userId: 1,
+        userId: 1
       })
     ).then((res) => {
       console.log('create')
@@ -29,7 +29,11 @@ export function Main() {
   }
 
   return (
-    <main className={styles.main}>
+    <main
+      className={classNames(styles.main, {
+        [styles.active]: active
+      })}
+    >
       {/* next image
             https://nextjs.org/docs/api-reference/next/image
         */}

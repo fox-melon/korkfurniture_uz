@@ -2,7 +2,7 @@ import { Container } from '@mui/material'
 import useTranslation from 'next-translate/useTranslation'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import styles from './Header.module.scss'
+import styles from './style.module.scss'
 
 export function Header() {
   const router = useRouter()
@@ -10,16 +10,16 @@ export function Header() {
   const langs = [
     {
       key: 'ru',
-      label: 'ru',
+      label: 'ru'
     },
     {
       key: 'uz',
-      label: 'uz',
+      label: 'uz'
     },
     {
       key: 'en',
-      label: 'en',
-    },
+      label: 'en'
+    }
   ]
   return (
     <header className={styles.header}>

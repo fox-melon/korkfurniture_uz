@@ -10,10 +10,7 @@ export default function SEO({ title }) {
       />
       <meta charSet='utf-8' />
       <title>{title || 'Next js template'}</title>
-      <meta
-        name='description'
-        content='Next js template — это коворкинг в г. Ташкент, основанный с целью создать атмосферу, максимально подходящую не только для работы, но и отдыха. Next js template коворкинг-центр позволяет стартаперам, фрилансерам и руководителям небольших компаний экономить на аренде офиса.'
-      />
+      <meta name='description' content='Next js' />
       <meta
         name='keywords'
         content='Cspace, coworking, co-working, center, tashkent'
@@ -24,11 +21,7 @@ export default function SEO({ title }) {
         content={title || 'Next js template'}
         key='ogtitle'
       />
-      <meta
-        property='og:description'
-        content='Next js template — это коворкинг в г. Ташкент, основанный с целью создать атмосферу, максимально подходящую не только для работы, но и отдыха. Next js template коворкинг-центр позволяет стартаперам, фрилансерам и руководителям небольших компаний экономить на аренде офиса.'
-        key='ogdesc'
-      />
+      <meta property='og:description' content='Next js' key='ogdesc' />
       <meta
         property='og:site_name'
         content={title || 'Next js template'}
@@ -41,10 +34,7 @@ export default function SEO({ title }) {
       />
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:title' content={title || 'Next js template'} />
-      <meta
-        name='twitter:description'
-        content='Next js template — это коворкинг в г. Ташкент, основанный с целью создать атмосферу, максимально подходящую не только для работы, но и отдыха. Next js template коворкинг-центр позволяет стартаперам, фрилансерам и руководителям небольших компаний экономить на аренде офиса.'
-      />
+      <meta name='twitter:description' content='Next js' />
       <meta name='twitter:site' content={title || 'Next js template'} />
       <meta name='twitter:creator' content='Udevs' />
       <meta

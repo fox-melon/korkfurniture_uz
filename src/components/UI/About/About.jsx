@@ -1,6 +1,6 @@
 import { Container } from '@mui/material'
 import useTranslation from 'next-translate/useTranslation'
-import styles from './About.module.scss'
+import styles from './style.module.scss'
 
 export function About() {
   const { t } = useTranslation('about')

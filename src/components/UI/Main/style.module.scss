@@ -2,6 +2,9 @@
 
 .main {
   min-height: 80vh;
+  &.active {
+    min-height: 50vh;
+  }
   .banner {
     height: rem(400);
     position: relative;
@@ -15,6 +18,7 @@
       color: #fff;
     }
   }
+
   .img {
     width: 50%;
   }

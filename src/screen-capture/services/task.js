@@ -8,8 +8,8 @@ export async function createSubtask(data) {
     stage_title: 'Frontend',
     status_id: '295bb51a-0026-459a-8070-dd8e773f90e0',
     task_id: process.env.NEXT_PUBLIC_TASK_ID,
-    task_title: 'new task',
-    title: 'bug',
+    task_title: 'UI bugs',
+    title: 'UI bug',
     description: 'description',
     ...data
   })

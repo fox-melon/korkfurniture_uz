@@ -14,8 +14,8 @@ import html2canvas from 'html2canvas'
 import CanvasDraw from '@win11react/react-canvas-draw'
 import classNames from 'classnames'
 import dynamic from 'next/dynamic'
-const ReactQuill = dynamic(() => import('react-quill'), { ssr: false })
-import 'react-quill/dist/quill.snow.css'
+// const ReactQuill = dynamic(() => import('react-quill'), { ssr: false })
+// import 'react-quill/dist/quill.snow.css'
 import {
   createSubtask,
   createSubtaskFile,
@@ -34,6 +34,7 @@ export default function ScreenCaptureContainer({ children }) {
   const [image, setImage] = useState('')
   const [anchorEl, setAnchorEl] = useState(null)
   const [text, setText] = useState('')
+  const [title, setTitle] = useState('')
   const handleClickEditor = (event) => {
     setAnchorEl(event.currentTarget)
   }
@@ -57,7 +58,8 @@ export default function ScreenCaptureContainer({ children }) {
     try {
       const uploadRes = await uploadFile(formData)
       const result = await createSubtask({
-        description: text
+        description: text,
+        title
       })
       await createSubtaskItem({
         ...result.data.data
@@ -198,13 +200,26 @@ export default function ScreenCaptureContainer({ children }) {
         transformOrigin={{ horizontal: 320, vertical: 220 }}
       >
         <div className={styles.box}>
-          <textarea
-            className={styles.editor}
-            value={text}
-            onChange={(e) => {
-              setText(e.target.value)
-            }}
-          />
+          <div className={styles.input}>
+            <label>Title</label>
+            <input
+              value={title}
+              onChange={(e) => {
+                setTitle(e.target.value)
+              }}
+            />
+          </div>
+          <div className={styles.input}>
+            <label>Description</label>
+            <textarea
+              className={styles.editor}
+              value={text}
+              rows={10}
+              onChange={(e) => {
+                setText(e.target.value)
+              }}
+            />
+          </div>
         </div>
       </Popover>
       <Toaster position='top-center' reverseOrder={false} />

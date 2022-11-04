@@ -90,11 +90,30 @@
 
 .box {
   width: 300px;
-  height: 200px;
   padding: 10px;
-  .editor {
-    height: 100%;
-    width: 100%;
-    outline: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  .input {
+    label {
+      font-weight: 500;
+      font-size: 14px;
+    }
+    input {
+      height: 40px;
+      padding: 6px 10px;
+    }
+    textarea {
+      padding: 6px 10px;
+    }
+    textarea,
+    input {
+      height: 100%;
+      width: 100%;
+      outline: none;
+      border-radius: 8px;
+      border: 1px solid #e5e9eb;
+      border-radius: 6px;
+    }
   }
 }

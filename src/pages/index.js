@@ -12,13 +12,13 @@ export default function Home({ data }) {
   )
 }
 
-export async function getServerSideProps(context) {
-  const urls = ['/posts']
-  const data = await fetchMultipleUrls(urls)
+// export async function getServerSideProps(context) {
+//   const urls = ['/posts']
+//   const data = await fetchMultipleUrls(urls)
 
-  return {
-    props: {
-      data
-    }
-  }
-}
+//   return {
+//     props: {
+//       data
+//     }
+//   }
+// }

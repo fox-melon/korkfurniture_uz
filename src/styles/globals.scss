@@ -25,6 +25,9 @@ a {
   box-sizing: border-box;
 }
 
-header {
-  height: rem(80) !important;
+.crosshairs {
+  &::before,
+  &::after {
+    background: #fff !important;
+  }
 }

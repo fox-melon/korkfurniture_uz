@@ -5,6 +5,7 @@ import theme from 'mui-theme'
 import { persistor, store } from '../store/store'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
+import ScreenCaptureContainer from 'screen-capture'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,17 +13,19 @@ function MyApp({ Component, pageProps }) {
       {typeof window !== 'undefined' ? (
         <PersistGate loading={null} persistor={persistor}>
           <ThemeProvider theme={theme}>
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
+            <ScreenCaptureContainer>
+              <Layout>
+                <Component {...pageProps} />
+              </Layout>
+            </ScreenCaptureContainer>
           </ThemeProvider>
         </PersistGate>
       ) : (
-          <ThemeProvider theme={theme}>
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
-          </ThemeProvider>
+        <ThemeProvider theme={theme}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeProvider>
       )}
     </Provider>
   )

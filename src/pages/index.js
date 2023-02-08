@@ -3,7 +3,6 @@ import SEO from 'components/SEO'
 import { fetchMultipleUrls } from 'services/fetchMultipleUrls'
 
 export default function Home({ data }) {
-  console.log('prr=>', process.env.NEXT_PUBLIC_TEST)
   return (
     <>
       <SEO />

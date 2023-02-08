@@ -1,11 +1,19 @@
-// services format should be in the same structure
-
+import { useMutation, useQuery } from 'react-query'
 import { request } from './http-client'
 
-export const getPosts = (params) =>
-  request.get('/posts', { params }).then((res) => res.data)
+const getPosts = (params) => request.get('/posts', { params })
+const createPost = (data) => request.post('/posts', data)
+const updatePost = (id, data) => request.put(`/posts/${id}`, data)
+const deletePost = (id) => request.delete(`/posts/${id}`)
 
-export const createPost = (data) => request.post('/posts', data)
-export const updatePost = (id, data) => request.put(`/posts/${id}`, data)
+export const usePost = ({ params }) => {
+  const posts = useQuery(['GET_POSTS'], () => getPosts(params), {
+    enabled: true
+  })
+  const createMutation = useMutation(createPost)
 
-export const deletePost = (id) => request.delete(`/posts/${id}`)
+  return {
+    posts,
+    createMutation
+  }
+}

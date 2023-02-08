@@ -2,30 +2,33 @@ import Image from 'next/image'
 import styles from './style.module.scss'
 import useTranslation from 'next-translate/useTranslation'
 import { Button } from '@mui/material'
-import { createPost, getPosts } from 'services'
 import { useEffect, useState } from 'react'
 import { Counter } from '../Counter/Counter'
 import classNames from 'classnames'
+import { usePost } from 'services'
 export function Main() {
   const { t } = useTranslation('common')
-  const [posts, setPosts] = useState([])
+
   const [active, setActive] = useState(false)
-  useEffect(() => {
-    getPosts({ limit: 10, page: 1 }).then((res) => {
-      setPosts(res)
-    })
-  }, [])
+  const { posts, createMutation } = usePost({
+    params: { limit: 10, page: 1 }
+  })
 
   const addPost = () => {
-    createPost(
-      JSON.stringify({
-        title: 'foo',
-        body: 'bar',
-        userId: 1
-      })
-    ).then((res) => {
-      console.log('create')
-    })
+    createMutation.mutate(
+      {
+        data: JSON.stringify({
+          title: 'foo',
+          body: 'bar',
+          userId: 1
+        })
+      },
+      {
+        onSuccess: (res) => {
+          console.log(res)
+        }
+      }
+    )
   }
 
   return (
@@ -67,7 +70,7 @@ export function Main() {
         Create post
       </Button>
       <div>
-        {posts.map((item) => (
+        {posts?.data?.map((item) => (
           <div key={item.id}>{item.title}</div>
         ))}
       </div>

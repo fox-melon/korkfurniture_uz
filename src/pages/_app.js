@@ -6,25 +6,31 @@ import { persistor, store } from '../store/store'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import ScreenCaptureContainer from 'screen-capture'
+import { QueryClientProvider } from 'react-query'
+import { queryClient } from 'services/http-client'
 
 function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
       {typeof window !== 'undefined' ? (
         <PersistGate loading={null} persistor={persistor}>
-          <ThemeProvider theme={theme}>
-            <ScreenCaptureContainer>
-              <Layout>
-                <Component {...pageProps} />
-              </Layout>
-            </ScreenCaptureContainer>
-          </ThemeProvider>
+          <QueryClientProvider client={queryClient}>
+            <ThemeProvider theme={theme}>
+              <ScreenCaptureContainer>
+                <Layout>
+                  <Component {...pageProps} />
+                </Layout>
+              </ScreenCaptureContainer>
+            </ThemeProvider>
+          </QueryClientProvider>
         </PersistGate>
       ) : (
         <ThemeProvider theme={theme}>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+          <QueryClientProvider client={queryClient}>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </QueryClientProvider>
         </ThemeProvider>
       )}
     </Provider>

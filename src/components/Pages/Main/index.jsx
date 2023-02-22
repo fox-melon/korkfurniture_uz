@@ -3,9 +3,9 @@ import styles from './style.module.scss'
 import useTranslation from 'next-translate/useTranslation'
 import { Button } from '@mui/material'
 import { useEffect, useState } from 'react'
-import { Counter } from '../Counter/Counter'
+import { Counter } from '../../UI/Counter'
 import classNames from 'classnames'
-import { usePost } from 'services'
+import { usePost } from '@/services'
 export function Main() {
   const { t } = useTranslation('common')
 
@@ -15,20 +15,13 @@ export function Main() {
   })
 
   const addPost = () => {
-    createMutation.mutate(
-      {
-        data: JSON.stringify({
-          title: 'foo',
-          body: 'bar',
-          userId: 1
-        })
-      },
-      {
-        onSuccess: (res) => {
-          console.log(res)
-        }
-      }
-    )
+    createMutation.mutate({
+      data: JSON.stringify({
+        title: 'foo',
+        body: 'bar',
+        userId: 1
+      })
+    })
   }
 
   return (

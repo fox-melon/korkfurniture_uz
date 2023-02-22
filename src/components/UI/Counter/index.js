@@ -4,13 +4,12 @@ import {
   decrement,
   increment,
   incrementByAmount,
-  incrementAsync,
-  selectCount
-} from 'store/counter/counterSlice'
+  incrementAsync
+} from '@/store/slices/counter'
 import styles from './style.module.scss'
 
 export function Counter() {
-  const count = useSelector(selectCount)
+  const count = useSelector((state) => state.counter?.value)
   const dispatch = useDispatch()
   const [incrementAmount, setIncrementAmount] = useState('2')
 

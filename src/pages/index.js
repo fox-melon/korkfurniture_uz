@@ -1,6 +1,6 @@
-import { Main } from 'components/UI/Main/Main'
-import SEO from 'components/SEO'
-import { fetchMultipleUrls } from 'services/fetchMultipleUrls'
+import { Main } from '@/components/Pages/Main'
+import SEO from '@/components/SEO'
+import { fetchMultipleUrls } from '@/services/fetchMultipleUrls'
 
 export default function Home({ data }) {
   return (

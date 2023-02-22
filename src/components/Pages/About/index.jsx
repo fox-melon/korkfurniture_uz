@@ -2,7 +2,7 @@ import { Container } from '@mui/material'
 import useTranslation from 'next-translate/useTranslation'
 import styles from './style.module.scss'
 
-export function About() {
+export default function About() {
   const { t } = useTranslation('about')
   return (
     <Container>

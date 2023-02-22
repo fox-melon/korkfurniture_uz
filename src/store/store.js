@@ -8,19 +8,19 @@ import {
   PAUSE,
   PERSIST,
   PURGE,
-  REGISTER,
+  REGISTER
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-import counterSlice from './counter/counterSlice'
+import counterSlice from './slices/counter'
 
 const persistConfig = {
   key: 'root',
   version: 1,
-  storage,
+  storage
 }
 
 const rootReducer = combineReducers({
-  counter: persistReducer(persistConfig, counterSlice),
+  counter: persistReducer(persistConfig, counterSlice)
 })
 
 export const store = configureStore({
@@ -28,9 +28,9 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-      },
-    }),
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
+      }
+    })
 })
 
 export let persistor = persistStore(store)

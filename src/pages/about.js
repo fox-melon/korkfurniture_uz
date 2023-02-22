@@ -1,5 +1,5 @@
-import { About } from 'components/UI/About/About'
-import SEO from 'components/SEO'
+import { About } from '@/components/Pages/About'
+import SEO from '@/components/SEO'
 
 export default function AboutUs() {
   return (

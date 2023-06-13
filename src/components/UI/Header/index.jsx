@@ -1,67 +1,50 @@
-import { Container } from '@mui/material'
-import useTranslation from 'next-translate/useTranslation'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import styles from './style.module.scss'
+import { Container } from "@mui/material";
+import useTranslation from "next-translate/useTranslation";
+import styles from "./style.module.scss";
 
 export default function Header() {
-  const router = useRouter()
-  const { t } = useTranslation('common')
-  const langs = [
+  const { t } = useTranslation("header");
+  const data = [
     {
-      key: 'ru',
-      label: 'ru'
+      id: 1,
+      title: "HoReCa",
+      text: "Mehmonxona, restoran, kafelar",
     },
     {
-      key: 'uz',
-      label: 'uz'
+      id: 2,
+      title: "Ta’lim muassasalari",
+      text: "O’quv markazlari, maktab va bog’chalar",
     },
     {
-      key: 'en',
-      label: 'en'
-    }
-  ]
+      id: 3,
+      title: "Boshqaruv ofislari",
+    },
+  ];
+
   return (
-    <header className={styles.header}>
+    <div className={styles.header}>
       <Container>
-        <div className={styles.box}>
-          <Link href='/'>
-            <a className={styles.logo}>
-              <h2>Logo</h2>
-            </a>
-          </Link>
-          <nav>
-            <ul>
-              <li>
-                <Link href='/'>
-                  <a>{t('home')}</a>
-                </Link>
-              </li>
-              <li>
-                <Link href='/blog'>
-                  <a>{t('blog')}</a>
-                </Link>
-              </li>
-              <li>
-                <Link href='/about'>
-                  <a>{t('about')}</a>
-                </Link>
-              </li>
-            </ul>
-          </nav>
-          <div className={styles.langs}>
-            <ul>
-              {langs.map((item) => (
-                <li key={item.key}>
-                  <Link href={router.asPath} locale={item.key}>
-                    <a>{item.label}</a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className={styles.textWrap}>
+          <h1 className={styles.heading}>
+            <p>Loyihalaymiz</p>
+            Individual dizayn bo’yicha mebellar
+          </h1>
+          <button>Buyurtma berish</button>
+        </div>
+        <div className={styles.col}>
+          {data?.map((value) => {
+            return (
+              <div className={styles.box} key={value?.id}>
+                <span className={styles.line}></span>
+                <div className={styles.item}>
+                  <div className={styles.title}>{value?.title}</div>
+                  <div className={styles.text}>{value?.text}</div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </Container>
-    </header>
-  )
+    </div>
+  );
 }

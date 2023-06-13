@@ -1,4 +1,4 @@
-import { About } from '@/components/Pages/About'
+import { About } from '@/components/Pages/Main'
 import SEO from '@/components/SEO'
 
 export default function AboutUs() {

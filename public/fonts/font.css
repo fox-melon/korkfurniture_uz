@@ -1,20 +1,26 @@
+
 @font-face {
-  font-family: 'SF Pro Display';
-  src: url('Sf_Pro_Display_Cufon/SFPRODISPLAYREGULAR.OTF') format('truetype');
+  font-family: "Montserrat";
+  src: url("Montserrat/Montserrat-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'SF Pro Display';
-  src: url('Sf_Pro_Display_Cufon/SFPRODISPLAYMEDIUM.OTF') format('truetype');
+  font-family: "Montserrat";
+  src: url("Montserrat/Montserrat-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'SF Pro Display';
-  src: url('Sf_Pro_Display_Cufon/SFPRODISPLAYBOLD.OTF') format('truetype');
+  font-family: "Montserrat";
+  src: url("Montserrat/Montserrat-SemiBold.ttf") format("truetype");
   font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
 }

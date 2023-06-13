@@ -1,10 +1,10 @@
 import Footer from '@/components/UI/Footer'
-import Header from '@/components/UI/Header'
+import Navbar from '@/components/UI/Navbar'
 
 export default function Layout({ children }) {
   return (
     <>
-      <Header />
+      <Navbar />
       {children}
       <Footer />
     </>

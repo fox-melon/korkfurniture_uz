@@ -1,6 +1,5 @@
 {
-  "greeting": "Hello world",
-  "home": "Home",
-  "blog": "Blog",
-  "about": "About"
+  "about":   "about Us",
+  "client":   "Customers",
+  "contact": "Contacts"
 }

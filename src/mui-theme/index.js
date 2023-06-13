@@ -17,7 +17,23 @@ export default createTheme({
       contrastText: '#ffcc00'
     }
   },
-  components: {
+  components: {MuiContainer: {
+    styleOverrides: {
+      root: {
+        paddingLeft: "20px",
+        paddingRight: "20px",
+        "@media (min-width: 600px)": {
+          paddingLeft: "15px",
+          paddingRight: "15px",
+        },
+      },
+      maxWidthLg: {
+        "@media (min-width: 1280px)": {
+          maxWidth: "1560px",
+        },
+      },
+    },
+  },
     MuiButton: {
       styleOverrides: {
         root: {

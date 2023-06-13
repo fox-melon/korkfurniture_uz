@@ -1,6 +1,5 @@
 {
-  "greeting": "Привет, мир",
-  "home": "Главная",
-  "blog": "Блог",
-  "about": "О нас"
+  "about":   "about Us",
+  "client":   "Customers",
+  "contact": "Contacts"
 }

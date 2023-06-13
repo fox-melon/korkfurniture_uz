@@ -1,0 +1,27 @@
+.menu {
+  padding: 26px;
+  width: 100%;
+  background-color: var(--primary-color);
+  text-align: center;
+  color: var(--secondary-color);
+  text-transform: capitalize;
+  .items {
+    display: grid;
+    gap: 32px;
+    margin: 60px 0;
+  }
+  .close {
+    text-align: start;
+  }
+  .phone {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 6px;
+    padding: 0 30px;
+    font-size: 13px;
+  }
+}

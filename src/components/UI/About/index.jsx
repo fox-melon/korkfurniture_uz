@@ -34,9 +34,56 @@ export default function About() {
         </div>
         <h1 className={styles.heading}>Kompaniya maqsadi</h1>
         <h2 className={styles.desc}>
-           Mebel ishlab chiqarish orqali insonlarga yaxshilik qilish va  <br /> ularga
-          halovat ulashish! 
+          Mebel ishlab chiqarish orqali insonlarga yaxshilik qilish va <br />{" "}
+          ularga halovat ulashish!
         </h2>
+      </div>
+      <div className={styles.mobile}>
+        <h1 className={styles.heading}>Biz haqimizda</h1>
+        <div className={styles.block}>
+          <Image
+            src={"/images/aboutMediaImg.svg"}
+            priority={true}
+            alt="БАЗИС МЕБЕЛЬЩИК"
+            width={343}
+            height={198}
+            layout="responsive"
+          />
+          <p className={styles.text}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            sodales, massa sit amet luctus porta, mi tellus dictum odio, luctus
+            tincidunt arcu turpis a ligula. Suspendisse sed turpis lectus.
+            Aenean hendrerit nisl vitae lobortis gravida. Maecenas tellus mi,
+            ornare sit amet auctor mattis, tincidunt vel diam. In pharetra arcu
+            metus, at posuere arcu ullamcorper blandit. Integer id lectus
+            condimentum, sodales dui nec, mollis risus. In iaculis rutrum
+            pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Vestibulum sodales, massa sit amet luctus porta, mi tellus
+            dictum odio, luctus tincidunt arcu turpis a ligula.
+          </p>
+        </div>
+        <div className={styles.block}>
+          <Image
+            src={"/images/aboutMediaImg.svg"}
+            priority={true}
+            alt="БАЗИС МЕБЕЛЬЩИК"
+            width={343}
+            height={198}
+            layout="responsive"
+          />
+          <p className={styles.text}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            sodales, massa sit amet luctus porta, mi tellus dictum odio, luctus
+            tincidunt arcu turpis a ligula. Suspendisse sed turpis lectus.
+            Aenean hendrerit nisl vitae lobortis gravida. Maecenas tellus mi,
+            ornare sit amet auctor mattis, tincidunt vel diam. In pharetra arcu
+            metus, at posuere arcu ullamcorper blandit. Integer id lectus
+            condimentum, sodales dui nec, mollis risus. In iaculis rutrum
+            pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Vestibulum sodales, massa sit amet luctus porta, mi tellus
+            dictum odio, luctus tincidunt arcu turpis a ligula.
+          </p>
+        </div>
       </div>
     </Container>
   );

@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function About() {
   const { t } = useTranslation("about");
   return (
-    <Container>
+    <Container id="about">
       <div className={styles.about}>
         <h1 className={styles.heading}>Biz haqimizda</h1>
         <div className={styles.block}>

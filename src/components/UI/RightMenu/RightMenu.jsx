@@ -52,15 +52,9 @@ export default function RightMenu({ isOpen, setIsOpen = () => {} }) {
             />
           </div>
           <div className={styles.items}>
-            <Link href="/">
-              <a className={styles.listItem}>{t("about")}</a>
-            </Link>
-            <Link href="/client">
-              <a className={styles.listItem}>{t("client")}</a>
-            </Link>
-            <Link href="/contact">
-              <a className={styles.listItem}>{t("contact")}</a>
-            </Link>
+              <a href="#about" className={styles.listItem}>{t("about")}</a>
+              <a href="#client" className={styles.listItem}>{t("client")}</a>
+              <a href="#contact" className={styles.listItem}>{t("contact")}</a>
           </div>
           <a href="tel:+998901234567" className={styles.phone}>
               <Image

@@ -20,7 +20,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className={styles.navbar}>
+    <header className={styles.navbar} id="navbar">
       <Container>
         <div className={styles.box}>
           <Link href="/" className={styles.logo}>
@@ -36,19 +36,13 @@ export default function Navbar() {
           <nav className={styles.desctop}>
             <ul>
               <li>
-                <Link href="/">
-                  <a>{t("about")}</a>
-                </Link>
+                  <a href="#about">{t("about")}</a>
               </li>
               <li>
-                <Link href="/client">
-                  <a>{t("client")}</a>
-                </Link>
+                  <a href="#client">{t("client")}</a>
               </li>
               <li>
-                <Link href="/contact">
-                  <a>{t("contact")}</a>
-                </Link>
+                  <a href="#contact">{t("contact")}</a>
               </li>
             </ul>
           </nav>

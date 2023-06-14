@@ -16,11 +16,7 @@ export default function Projects() {
     { id: 22, src: "/images/room1.svg", text: "Na’jot Ta’lim markazi" },
     { id: 23, src: "/images/room1.svg", text: "Na’jot Ta’lim markazi" },
   ];
-  const items2 = [
-    { id: 1, src: "/images/room1.svg", text: "Na’jot Ta’lim markazi" },
-    { id: 2, src: "/images/room1.svg", text: "Na’jot Ta’lim markazi" },
-    { id: 3, src: "/images/room1.svg", text: "Na’jot Ta’lim markazi" },
-  ];
+ 
   return (
     <Container>
       <h1 className={styles.heading}>Biz haqimizda</h1>

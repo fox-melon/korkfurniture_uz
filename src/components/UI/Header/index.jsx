@@ -22,7 +22,7 @@ export default function Header() {
   ];
 
   return (
-    <div className={styles.header}>
+    <div className={styles.header} id="header">
       <Container>
         <div className={styles.textWrap}>
           <h1 className={styles.heading}>

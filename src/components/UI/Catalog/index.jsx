@@ -8,7 +8,7 @@ export default function Catalog() {
   const [phone, ssetPhone] = useState("");
 
   return (
-    <div className={styles.catalog}>
+    <div className={styles.catalog} id="catalog">
       <Container>
         <div className={styles.grid}>
           <div className={styles.textWrap}>

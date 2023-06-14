@@ -16,7 +16,7 @@ export default function Client() {
     { id: 8, img: "/images/SteelLogo.svg" },
   ];
   return (
-    <Container>
+    <Container id="client">
       <h1 className={styles.heading}>Mijozlarimiz</h1>
       <div className={styles.logoWrap}>
         {data.map((item) => {

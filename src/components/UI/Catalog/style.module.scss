@@ -1,0 +1,123 @@
+.catalog {
+  width: 100%;
+  min-height: 10vh;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  margin-top: 263px;
+  .grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    align-items: center;
+    justify-content: space-between;
+    .textWrap {
+      .topText {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        .line {
+          display: inline-block;
+          width: 0.4rem;
+          height: 64px;
+          background: var(--secondary-color);
+          border-radius: 10px;
+          vertical-align: middle;
+          margin-right: 24px;
+        }
+      }
+      .title {
+        font-size: 48px;
+        line-height: 59px;
+        margin: 0;
+      }
+      .desc {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    .form {
+      display: flex;
+      gap: 1rem;
+      input {
+        color: var(--text-color);
+        font-size: 16px;
+        flex: 3;
+        background-color: transparent;
+        outline: none;
+        padding: 18px 24px;
+        border: 1px solid #587373;
+        border-radius: 10px;
+        &::placeholder {
+          font-size: 16px;
+          line-height: 20px;
+          color: #809e9e;
+        }
+      }
+      button {
+        padding: 18px 32px;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: 10px;
+        border: none;
+      }
+    }
+    .imgWrap {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 2;
+      position: relative;
+      z-index: 1;
+      height: 415px;
+      img {
+        z-index: 3;
+        position: absolute;
+        top: -119px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog {
+    margin-top: 116px;
+    padding: 30px 0 60px;
+    .grid {
+      grid-template-columns: 100%;
+      .textWrap {
+        .topText {
+          font-size: 12px;
+          line-height: 15px;
+          .line {
+            height: 24px;
+            width: 2px;
+            margin-right: 8px;
+          }
+        }
+        .title {
+          font-size: 32px;
+          line-height: 39px;
+        }
+        .desc {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+      .imgWrap {
+        justify-self: center;
+        grid-column: inherit;
+        grid-row: initial;
+        height: 220px;
+        width: 272px;
+        img {
+          width: 100%;
+          height: 100%;
+          top: 0;
+        }
+      }
+      .form {
+        flex-direction: column;
+      }
+    }
+  }
+}

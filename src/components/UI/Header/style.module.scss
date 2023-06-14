@@ -61,7 +61,6 @@
         color: var(--text-color);
       }
       .text {
-        font-weight: 300;
         font-size: 16px;
         line-height: 150%;
         color: var(--text-color);
@@ -95,7 +94,7 @@
       gap: 16px;
       .box {
         flex-direction: column;
-        width: 170px;
+        width: 159px;
         gap: 8px;
         .line {
           flex-shrink: 0;

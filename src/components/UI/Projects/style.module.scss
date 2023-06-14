@@ -1,0 +1,89 @@
+.heading {
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  margin: 144px 0 80px;
+}
+.gridOne {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 24px;
+  div {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    span {
+      width: 100% !important;
+    }
+    .title {
+      position: absolute;
+      bottom: 30px;
+      left: 50px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: var(--text-color);
+      z-index: 2;
+      .line {
+        vertical-align: middle;
+        display: inline-block;
+        margin-right: 20px;
+        width: 4px;
+        height: 4rem;
+        background-color: var(--secondary-color);
+        border-radius: 6px;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 20%;
+      background: linear-gradient(0deg, #003e3e 0%, rgba(0, 62, 62, 0) 100%);
+      border-radius: 0px 0px 30px 30px;
+      z-index: 1;
+    }
+  }
+  .card5 {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
+    span {
+      height: 100% !important;
+    }
+  }
+  .card21 {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+    background-color: azure;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 32px;
+    line-height: 39px;
+  }
+  .gridOne {
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    div {
+      .title {
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    .card5 {
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 2;
+    }
+    .card21 {
+      grid-column: 1 / span 2;
+      grid-row: 5 / span 1;
+    }
+  }
+}

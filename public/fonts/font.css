@@ -2,25 +2,25 @@
 @font-face {
   font-family: "Montserrat";
   src: url("Montserrat/Montserrat-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
   src: url("Montserrat/Montserrat-Medium.ttf") format("truetype");
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Montserrat";
   src: url("Montserrat/Montserrat-SemiBold.ttf") format("truetype");
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
   src: url("Montserrat/Montserrat-Bold.ttf") format("truetype");
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
 }

@@ -1,7 +1,7 @@
 @use "/src/styles/mixins";
 
 .purpose {
-  padding:56px 0 80px ;
+  padding: 56px 0 80px;
   background-color: var(--primary-color);
   color: var(--text-color);
   .heading {
@@ -9,12 +9,26 @@
     margin-bottom: 80px;
   }
   .desc {
+    width: fit-content;
+    margin: auto;
     text-align: center;
     font-weight: 400;
     font-size: 32px;
     line-height: 39px;
     font-style: italic;
-    margin: 40px 0;
+    margin: 40px auto;
+    position: relative;
+    &::before {
+      content: url("/images/quoteBefore.svg");
+      position: absolute;
+      left: -2rem;
+      top: -1.2rem;
+    }
+    &::after {
+      content: url("/images/quoteAfter.svg");
+      position: absolute;
+      right: -2rem;
+    }
   }
 }
 
@@ -26,6 +40,14 @@
     }
     .desc {
       font-size: 20px;
+      &::before {
+        left: -0.5rem;
+        top: -1rem;
+      }
+      &::after {
+        right: -0.5rem;
+        bottom: -0.5rem;
+      }
     }
   }
 }

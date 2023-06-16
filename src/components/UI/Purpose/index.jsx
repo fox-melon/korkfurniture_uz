@@ -8,8 +8,8 @@ export default function Purpose() {
       <Container>
         <h1 className={styles.heading}>Kompaniya maqsadi</h1>
         <h2 className={styles.desc}>
-         " Mebel ishlab chiqarish orqali insonlarga yaxshilik qilish va <br />{" "}
-          ularga halovat ulashish! "
+          Mebel ishlab chiqarish orqali insonlarga yaxshilik qilish va <br />{" "}
+          ularga halovat ulashish! 
         </h2>
       </Container>
     </div>

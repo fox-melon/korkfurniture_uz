@@ -1,0 +1,31 @@
+@use "/src/styles/mixins";
+
+.purpose {
+  padding:56px 0 80px ;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  .heading {
+    @include mixins.title;
+    margin-bottom: 80px;
+  }
+  .desc {
+    text-align: center;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    font-style: italic;
+    margin: 40px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .purpose {
+    padding: 40px 0;
+    .heading {
+      @include mixins.titleMobile;
+    }
+    .desc {
+      font-size: 20px;
+    }
+  }
+}

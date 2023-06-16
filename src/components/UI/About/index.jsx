@@ -5,14 +5,55 @@ import Image from "next/image";
 
 export default function About() {
   const { t } = useTranslation("about");
+  const data = [
+    {
+      id: 1,
+      src: "/images/horeca.svg",
+      title: "HoReCa",
+      text: "Mehmonxona, restoran, kafelar",
+    },
+    {
+      id: 2,
+      src: "/images/education.svg",
+      title: "Ta’lim muassasalari",
+      text: "O’quv markazlari, maktab va bog’chalar",
+    },
+    {
+      id: 3,
+      src: "/images/ofis.svg",
+      title: "Boshqaruv ofislari",
+      text: "Kichik va katta turdagi kompaniyalar va biznes markazlar",
+    },
+  ];
   return (
     <Container id="about">
       <div className={styles.about}>
         <h1 className={styles.heading}>Biz haqimizda</h1>
+        <h2 className={styles.question}>
+          KORK MEBEL FABRIKASI NIMA ISHLAB CHIQARADI?
+        </h2>
+        <p className={styles.questionBottomText}>
+          Fabrikamiz asosan quyidagi faoliyat turlari uchun mebel ishlab
+          chiqarishdan iborat
+        </p>
+        <div className={styles.types}>
+          {data?.map((value) => {
+            return (
+              <div className={styles.typeItem} key={value.id}>
+                <img src={value.src} alt="" />
+                <div className={styles.texts}>
+                  <div className={styles.title}>{value.title}</div>
+                  <p className={styles.text}>{value.text}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
         <div className={styles.block}>
           <div className={styles.textWrap}>
             <h2 className={styles.title}>
-              Avtomatizatsiya “БАЗИС МЕБЕЛЬЩИК” <br /> Biz bilan!
+              Avtomatizatsiya “БАЗИС МЕБЕЛЬЩИК”
+              <br /> Biz bilan!
             </h2>
             <p className={styles.text}>
               Mebel ishlab chiqarishdagi eng muhim jarayon, mebel kontruksiyasi
@@ -22,69 +63,12 @@ export default function About() {
             </p>
           </div>
           <div className={styles.imgWrap}>
-            <Image
-              src={"/images/aboutImg.svg"}
-              priority={true}
-              alt="БАЗИС МЕБЕЛЬЩИК"
-              width={636}
-              height={356}
-              layout="fixed"
-            />
+            <img src={"/images/aboutImg.svg"} alt="БАЗИС МЕБЕЛЬЩИК" />
           </div>
-        </div>
-        <h1 className={styles.heading}>Kompaniya maqsadi</h1>
-        <h2 className={styles.desc}>
-          Mebel ishlab chiqarish orqali insonlarga yaxshilik qilish va <br />{" "}
-          ularga halovat ulashish!
-        </h2>
-      </div>
-      <div className={styles.mobile}>
-        <h1 className={styles.heading}>Biz haqimizda</h1>
-        <div className={styles.block}>
-          <Image
-            src={"/images/aboutMediaImg.svg"}
-            priority={true}
-            alt="БАЗИС МЕБЕЛЬЩИК"
-            width={343}
-            height={198}
-            layout="responsive"
-          />
-          <p className={styles.text}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            sodales, massa sit amet luctus porta, mi tellus dictum odio, luctus
-            tincidunt arcu turpis a ligula. Suspendisse sed turpis lectus.
-            Aenean hendrerit nisl vitae lobortis gravida. Maecenas tellus mi,
-            ornare sit amet auctor mattis, tincidunt vel diam. In pharetra arcu
-            metus, at posuere arcu ullamcorper blandit. Integer id lectus
-            condimentum, sodales dui nec, mollis risus. In iaculis rutrum
-            pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Vestibulum sodales, massa sit amet luctus porta, mi tellus
-            dictum odio, luctus tincidunt arcu turpis a ligula.
-          </p>
-        </div>
-        <div className={styles.block}>
-          <Image
-            src={"/images/aboutMediaImg.svg"}
-            priority={true}
-            alt="БАЗИС МЕБЕЛЬЩИК"
-            width={343}
-            height={198}
-            layout="responsive"
-          />
-          <p className={styles.text}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            sodales, massa sit amet luctus porta, mi tellus dictum odio, luctus
-            tincidunt arcu turpis a ligula. Suspendisse sed turpis lectus.
-            Aenean hendrerit nisl vitae lobortis gravida. Maecenas tellus mi,
-            ornare sit amet auctor mattis, tincidunt vel diam. In pharetra arcu
-            metus, at posuere arcu ullamcorper blandit. Integer id lectus
-            condimentum, sodales dui nec, mollis risus. In iaculis rutrum
-            pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Vestibulum sodales, massa sit amet luctus porta, mi tellus
-            dictum odio, luctus tincidunt arcu turpis a ligula.
-          </p>
         </div>
       </div>
     </Container>
   );
 }
+
+// about 2 qismga bolinvoti css codega tegilmadi hali . yangisi import qilinmagan

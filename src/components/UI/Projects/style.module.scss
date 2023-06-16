@@ -1,9 +1,9 @@
+@use "/src/styles/mixins";
+
 .heading {
-  text-align: center;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 59px;
+  @include mixins.title;
   margin: 144px 0 80px;
+  color: var(--primary-color);
 }
 .gridOne {
   display: grid;
@@ -14,16 +14,15 @@
     position: relative;
     border-radius: 30px;
     overflow: hidden;
-    span {
-      width: 100% !important;
+    img {
+      width: 100%;
     }
     .title {
+      margin: 0;
       position: absolute;
       bottom: 30px;
       left: 50px;
-      font-weight: 600;
-      font-size: 24px;
-      line-height: 29px;
+      @include mixins.text;
       color: var(--text-color);
       z-index: 2;
       .line {
@@ -64,8 +63,8 @@
 
 @media (max-width: 768px) {
   .heading {
-    font-size: 32px;
-    line-height: 39px;
+    margin: 48px 0;
+    @include mixins.titleMobile;
   }
   .gridOne {
     gap: 16px;
@@ -73,8 +72,13 @@
     grid-template-rows: repeat(6, 1fr);
     div {
       .title {
-        font-size: 12px;
-        line-height: 15px;
+        @include mixins.textMobile;
+        bottom: 16px;
+        left: 8px;
+        .line {
+          height: 24px;
+          margin-right: 8px;
+        }
       }
     }
     .card5 {

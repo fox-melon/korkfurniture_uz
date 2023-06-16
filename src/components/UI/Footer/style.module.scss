@@ -13,6 +13,26 @@
       display: flex;
       font-size: 16px;
       line-height: 20px;
+      a {
+        transition: all 0.5s;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          height: 3px;
+          width: 100%;
+          bottom: -10px;
+          background: var(--secondary-color);
+          transition: transform 0.5s ease-in-out;
+          transform: scaleX(0);
+          transform-origin: right;
+        }
+        &:focus::before,
+        &:hover::before {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
     }
   }
   .bottom {
@@ -50,6 +70,26 @@
         align-items: center;
         gap: 24px;
         padding: 0;
+        a {
+          transition: all 0.5s;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            height: 3px;
+            width: 100%;
+            bottom: -10px;
+            background: var(--secondary-color);
+            transition: transform 0.5s ease-in-out;
+            transform: scaleX(0);
+            transform-origin: right;
+          }
+          &:focus::before,
+          &:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
       }
     }
   }

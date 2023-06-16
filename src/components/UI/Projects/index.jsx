@@ -16,23 +16,18 @@ export default function Projects() {
     { id: 22, src: "/images/room1.svg", text: "Na’jot Ta’lim markazi" },
     { id: 23, src: "/images/room1.svg", text: "Na’jot Ta’lim markazi" },
   ];
- 
+
   return (
     <Container>
-      <h1 className={styles.heading}>Biz haqimizda</h1>
+      <h1 className={styles.heading}>Bizning loyihalar</h1>
       <div className={styles.gridOne}>
         {items1?.map((value) => {
           return (
             <div className={styles[`card${value?.id}`]} key={value?.id}>
-              <Image
-                className={styles[`room${value?.id}`]}
+              <img
                 src={`/images/room${value?.id}.svg`}
-                priority={true}
                 alt="room"
-                width={372}
-                height={440}
-                layout="fixed"
-                onClick={(e) => console.log(e)}
+                className={styles[`room${value?.id}`]}
               />
               <p className={styles.title}>
                 <i className={styles.line}></i> {value?.text}

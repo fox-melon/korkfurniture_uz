@@ -1,3 +1,5 @@
+@use "/src/styles/mixins";
+ 
 .catalog {
   width: 100%;
   min-height: 10vh;
@@ -25,9 +27,9 @@
         }
       }
       .title {
-        font-size: 48px;
-        line-height: 59px;
+        @include mixins.title;
         margin: 0;
+        text-align: start;
       }
       .desc {
         font-weight: 400;
@@ -60,7 +62,12 @@
         font-weight: 500;
         font-size: 16px;
         border-radius: 10px;
-        border: none;
+        border: 1px solid transparent;
+        &:hover {
+          color: var(--secondary-color);
+          border: 1px solid var(--secondary-color);
+          background-color: var(--primary-color);
+        }
       }
     }
     .imgWrap {
@@ -73,6 +80,7 @@
         z-index: 3;
         position: absolute;
         top: -119px;
+        width: 100%;
       }
     }
   }
@@ -117,6 +125,9 @@
       }
       .form {
         flex-direction: column;
+        input,button {
+          padding: 12px 24px;
+        }
       }
     }
   }

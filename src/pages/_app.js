@@ -1,6 +1,8 @@
 import { ThemeProvider } from '@emotion/react'
 import Layout from '@/components/Layout'
 import '@/styles/globals.scss'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import theme from '@/mui-theme'
 import { persistor, store } from '../store/store'
 import { Provider } from 'react-redux'

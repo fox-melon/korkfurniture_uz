@@ -15,6 +15,7 @@ const nextConfig = nextTranslate({
   // env: {
   //   BASE_URL: baseUrl,
   // },
+ 
 })
 
 module.exports = nextConfig

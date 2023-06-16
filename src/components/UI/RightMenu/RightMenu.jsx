@@ -6,6 +6,7 @@ import { useStyles } from "./muStyles";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import PhoneIcon from "../Navbar/PhoneIcon";
 
 export default function RightMenu({ isOpen, setIsOpen = () => {} }) {
   const classes = useStyles();
@@ -52,22 +53,20 @@ export default function RightMenu({ isOpen, setIsOpen = () => {} }) {
             />
           </div>
           <div className={styles.items}>
-              <a href="#about" className={styles.listItem}>{t("about")}</a>
-              <a href="#client" className={styles.listItem}>{t("client")}</a>
-              <a href="#contact" className={styles.listItem}>{t("contact")}</a>
+            <a href="#about" className={styles.listItem}>
+              {t("about")}
+            </a>
+            <a href="#client" className={styles.listItem}>
+              {t("client")}
+            </a>
+            <a href="#contact" className={styles.listItem}>
+              {t("contact")}
+            </a>
           </div>
           <a href="tel:+998901234567" className={styles.phone}>
-              <Image
-                className={styles.logo}
-                src={"/images/phone.svg"}
-                objectFit="cover"
-                priority={true}
-                alt="konk"
-                width={16}
-                height={16}
-              />
-              <p>{"+998 (90) 123-45-67"}</p>
-            </a>
+            <PhoneIcon />
+            <p>{"+998 (90) 123-45-67"}</p>
+          </a>
         </div>
       </div>
     </Drawer>

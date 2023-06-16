@@ -24,9 +24,6 @@ a {
   box-sizing: border-box;
 }
 
-.crosshairs {
-  &::before,
-  &::after {
-    background: #fff !important;
-  }
+button:hover {
+  cursor: pointer;
 }

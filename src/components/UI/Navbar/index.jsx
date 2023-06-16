@@ -6,6 +6,7 @@ import { Container } from "@mui/material";
 import styles from "./style.module.scss";
 import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";
+import PhoneIcon from "./PhoneIcon";
 
 export default function Navbar() {
   const router = useRouter();
@@ -59,15 +60,7 @@ export default function Navbar() {
               </ul>
             </div>
             <a href="tel:+998901234567" className={styles.phone}>
-              <Image
-                className={styles.logo}
-                src={"/images/phone.svg"}
-                objectFit="cover"
-                priority={true}
-                alt="konk"
-                width={20}
-                height={20}
-              />
+              <PhoneIcon />
               <p>{"+998 (90) 123-45-67"}</p>
             </a>
           </div>

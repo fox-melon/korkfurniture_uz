@@ -1,10 +1,9 @@
-@import "@/styles/unit.scss";
+@use "/src/styles/mixins";
 
 .header {
   width: 100%;
   min-height: 60vh;
-  padding: 152px 0 189px 0;
-
+  padding: 180px 0;
   background: linear-gradient(
       94.34deg,
       var(--primary-color) 45.95%,
@@ -14,56 +13,37 @@
   background-size: cover;
   background-position: center;
   .textWrap {
-    margin-bottom: 120px;
+    width: 45vw;
     .heading {
-      width: 600px;
+      margin: 0;
       font-weight: 600;
       font-size: 64px;
+      line-height: 83px;
       color: var(--text-color);
-      p {
-        width: fit-content;
-        font-size: 48px;
-        color: var(--primary-color);
-        background: var(--secondary-color);
-        padding: 8px 10px;
-      }
     }
-    button {
-      padding: 26px 48px;
-      background-color: var(--secondary-color);
+    .item {
+      margin: 54px 0 88px;
+      width: fit-content !important;
+      text-align: start;
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 62px;
+      padding: 8px 10px;
       color: var(--primary-color);
-      font-weight: 500;
+      background: var(--secondary-color);
+    }
+    .btn {
+      padding: 26px 48px;
+      background-color: #b35151;
+      color: var(--text-color);
+      font-weight: 600;
       font-size: 24px;
       border-radius: 10px;
       border: none;
-    }
-  }
-  .col {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: start;
-    gap: 120px;
-    .box {
-      width: 271px;
-      display: flex;
-      gap: 24px;
-      .line {
-        display: inline-block;
-        width: 0.4rem;
-        height: auto;
-        background: var(--secondary-color);
-        border-radius: 10px;
-      }
-      .title {
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 29px;
-        color: var(--text-color);
-      }
-      .text {
-        font-size: 16px;
-        line-height: 150%;
-        color: var(--text-color);
+      transition: all 0.2s;
+      &:hover {
+        background: #a64a4a;
+        box-shadow: 0px 10px 40px rgba(166, 74, 74, 0.4);
       }
     }
   }
@@ -75,38 +55,20 @@
     background-color: var(--secondary-color);
     padding: 80px 0;
     .textWrap {
-      margin-bottom: 60px;
+      width: 100%;
       .heading {
-        width: 343px;
         font-size: 40px;
         line-height: 130%;
-        p {
-          font-size: 32px;
-        }
       }
-      button {
+      .btn {
         width: 100%;
         font-size: 14px;
         padding: 15px;
       }
-    }
-    .col {
-      gap: 16px;
-      .box {
-        flex-direction: column;
-        width: 159px;
-        gap: 8px;
-        .line {
-          flex-shrink: 0;
-          width: 56px;
-          height: 56px;
-        }
-        .title {
-          font-size: 14px;
-        }
-        .text {
-          font-size: 12px;
-        }
+      .item {
+        margin: 16px 0 60px;
+        font-size: 25px;
+        line-height: 35px;
       }
     }
   }

@@ -3,7 +3,6 @@ import { Drawer } from "@mui/material";
 import styles from "./RightMenu.module.scss";
 import useTranslation from "next-translate/useTranslation";
 import { useStyles } from "./muStyles";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import PhoneIcon from "../Navbar/PhoneIcon";

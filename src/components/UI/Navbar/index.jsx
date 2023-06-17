@@ -74,6 +74,7 @@ export default function Navbar() {
               alt="konk"
               width={24}
               height={24}
+     
               onClick={() => setIsOpen(true)}
 
             />

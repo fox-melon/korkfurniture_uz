@@ -1,10 +1,8 @@
 import { Container } from "@mui/material";
 import useTranslation from "next-translate/useTranslation";
 import styles from "./style.module.scss";
-import Image from "next/image";
 
 export default function About() {
-  const { t } = useTranslation("about");
   const data = [
     {
       id: 1,
@@ -70,5 +68,3 @@ export default function About() {
     </Container>
   );
 }
-
-// about 2 qismga bolinvoti css codega tegilmadi hali . yangisi import qilinmagan

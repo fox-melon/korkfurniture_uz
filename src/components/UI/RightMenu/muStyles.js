@@ -4,13 +4,13 @@ export const useStyles = makeStyles({
   root: {
     "& .MuiPaper-root": {
       borderRadius: 0,
-      backgroundColor:"var(--primary-color)"
+      backgroundColor: "var(--primary-color)"
     },
   },
   list: {
     width: "50vw",
     "@media (max-width: 600px)": {
-      width: "80vw",  
+      width: "80vw",
     },
   },
   fullList: {

@@ -2,14 +2,17 @@
   width: 1000px;
   height: 70vh;
   max-width: 80vw;
-  max-height: fit-content;
+  max-height: 90vh;
   padding: 50px;
   background-color: white;
   position: relative;
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
   line-height: 49px;
   color: var(--primary-color);
+  display: grid;
+  align-items: center;
+  grid-template-rows: 20% 80%;
   .imgWrap {
     outline: none;
     width: 100%;

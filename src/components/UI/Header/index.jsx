@@ -8,28 +8,30 @@ export default function Header() {
       <Container>
         <div className={styles.textWrap}>
           <h1 className={styles.heading}>
-          
             Individual dizayn bo’yicha mebellar
-            
           </h1>
           <Slider
-              lazyLoad={true}
-              infinite={true}
-              autoplay={true}
-              arrows={false}
-              adaptiveHeight={true}
-              autoplaySpeed={3000}
-            >
-              {[
-                "Loyihalaymiz",
-                "Ishlab chiqaramiz",
-                "Yetkazib beramiz",
-                "O'rnatamiz",
-                "Halovatingiz uchun!",
-              ].map((el, index) => (
-                <span key={index} className={styles.item}>{el}</span>
-              ))}
-            </Slider>
+            lazyLoad={true}
+            infinite={true}
+            autoplay={true}
+            arrows={false}
+            adaptiveHeight={true}
+            autoplaySpeed={3000}
+          >
+            {[
+              "Loyihalaymiz",
+              "Ishlab chiqaramiz",
+              "Yetkazib beramiz",
+              "O'rnatamiz",
+              "Halovatingiz uchun!",
+            ].map((el, index) => (
+              <div className={styles.sliderWrap}>
+                <span key={index} className={styles.item}>
+                  {el}
+                </span>
+              </div>
+            ))}
+          </Slider>
           <button className={styles.btn}>Buyurtma berish</button>
         </div>
       </Container>

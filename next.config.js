@@ -10,12 +10,13 @@ const nextTranslate = require('next-translate')
 const nextConfig = nextTranslate({
   reactStrictMode: true,
   images: {
-    domains: ['test.cdn.rasta.app'],
+    domains: ['cdn.quickweb.uz'],
   },
   // env: {
   //   BASE_URL: baseUrl,
   // },
- 
+
+
 })
 
 module.exports = nextConfig

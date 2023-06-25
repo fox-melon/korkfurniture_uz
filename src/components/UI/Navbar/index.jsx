@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -18,6 +19,14 @@ export default function Navbar() {
       key: "uz",
       label: "uz",
     },
+    {
+      key: "en",
+      label: "en",
+    },
+    {
+      key: "ru",
+      label: "ру",
+    },
   ];
 
   return (
@@ -37,26 +46,28 @@ export default function Navbar() {
           <nav className={styles.desctop}>
             <ul>
               <li>
-                  <a href="#about">{t("about")}</a>
+                <a href="#about">{t("about")}</a>
               </li>
               <li>
-                  <a href="#client">{t("client")}</a>
+                <a href="#client">{t("client")}</a>
               </li>
               <li>
-                  <a href="#contact">{t("contact")}</a>
+                <a href="#contact">{t("contact")}</a>
               </li>
             </ul>
           </nav>
           <div className={styles.right}>
             <div className={styles.langs}>
               <ul>
-                {langs.map((item) => (
-                  <li key={item.key}>
-                    <Link href={router.asPath} locale={item.key}>
-                      <a>{item.label}</a>
-                    </Link>
-                  </li>
-                ))}
+                {langs.map((item) => {
+                  return (
+                    <li key={item.key}>
+                      <Link href={router.asPath} locale={item.key}>
+                        <a>{item.label}</a>
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <a href="tel:+998901234567" className={styles.phone}>
@@ -74,9 +85,7 @@ export default function Navbar() {
               alt="konk"
               width={24}
               height={24}
-     
               onClick={() => setIsOpen(true)}
-
             />
             <Link href={"/"}>
               <a>

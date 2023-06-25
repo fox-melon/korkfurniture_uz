@@ -1,11 +1,10 @@
 module.exports = {
   locales: ['ru', 'en', 'uz'],
-  defaultLocale: 'uz',
+  defaultLocale: 'en',
   loadLocaleFrom: (lang, ns) =>
-    import(`@/locales/${lang}/${ns}.json`).then((m) => m.default),
+    import(`@/locales/${lang}/common.json`).then((m) => m.default),
   pages: {
-    '*': ['common'],
-    '/about': ['about']
+    '*': ['common']
   },
-  localeDetection: false
+  localeDetection: false,
 }

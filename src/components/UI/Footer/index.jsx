@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import styles from "./style.module.scss";
 import Link from "next/link";
 import { Container } from "@mui/material";

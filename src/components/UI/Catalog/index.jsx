@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Container } from "@mui/material";
 import useTranslation from "next-translate/useTranslation";
 import styles from "./style.module.scss";

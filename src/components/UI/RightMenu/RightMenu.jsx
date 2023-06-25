@@ -20,6 +20,7 @@ export default function RightMenu({ isOpen, setIsOpen = () => {} }) {
     return () => {
       router.events.off("routeChangeStart", handleRouteChange);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggleDrawer = () => (event) => {

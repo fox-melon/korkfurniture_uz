@@ -2,8 +2,30 @@ import { Container } from "@mui/material";
 import useTranslation from "next-translate/useTranslation";
 import styles from "./style.module.scss";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import axios from "axios";
 
 export default function Contact() {
+  const [isSucces, setIsSuccess] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    console.log(data);
+    try {
+      let res = await axios.get(
+        `https://korkfurniture.uz/api/bot?full_name=${data.name}&phone_number=${data.phone_number}&description=${data.description}`
+      );
+    } catch (error) {
+      console.error(error);
+    }
+    setIsSuccess(true);
+  };
+
   const { t } = useTranslation("common");
   const data = [
     {
@@ -42,12 +64,39 @@ export default function Contact() {
                 );
               })}
             </ul>
-            <div className={styles.form}>
-              <input type="text" placeholder={t("name")} />
-              <input type="tel" placeholder={t("phone_number")} />
-              <textarea rows="5" placeholder={t("description")}></textarea>
-              <button>{t("submit")}</button>
-            </div>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className={styles.form}>
+                <input
+                  type="text"
+                  placeholder={t("name")}
+                  {...register("name")}
+                />
+                <input
+                  type="tel"
+                  placeholder={t("phone_number")}
+                  {...register("phone_number", {
+                    required: true,
+                    pattern: /[0-9]/,
+                  })}
+                />
+                {errors.phone_number && (
+                  <span style={{ color: "red" }}>
+                    Telefon nomerda xatolik (+998 90 123 34 56)
+                  </span>
+                )}
+                <textarea
+                  rows="5"
+                  placeholder={t("description")}
+                  {...register("description")}
+                ></textarea>
+                <button onSubmit={handleSubmit(onSubmit)}>{t("submit")}</button>
+                {isSucces && (
+                  <span style={{ color: "greenyellow" }}>
+                    Sizga tez orada bog{"'"}lanamiz.
+                  </span>
+                )}
+              </div>
+            </form>
           </div>
         </Container>
       </div>

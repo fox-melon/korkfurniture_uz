@@ -3,7 +3,10 @@ import styles from "./style.module.scss";
 import Link from "next/link";
 import { Container } from "@mui/material";
 import Image from "next/image";
+import useTranslation from "next-translate/useTranslation";
 export default function Footer() {
+  const { t } = useTranslation("common");
+
   return (
     <>
       <footer className={styles.footer} id="footer">
@@ -22,13 +25,13 @@ export default function Footer() {
             <nav>
               <ul>
                 <li>
-                  <a href="#about">Biz haqimizda</a>
+                  <a href="#about">{t("about")}</a>
                 </li>
                 <li>
-                  <a href="#client">Mijozlar </a>
+                  <a href="#client">{t("client")}</a>
                 </li>
                 <li>
-                  <a href="#contact">Kontaktlar</a>
+                  <a href="#contact">{t("contact")}</a>
                 </li>
               </ul>
             </nav>

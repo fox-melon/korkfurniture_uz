@@ -1,6 +1,22 @@
 {
   "about":   "About Us",
   "client":  "Clients",
-  "contact": "Contacts"
+  "our_clients":"Our Clients",
+  "contact": "Contacts",
+  "get_catalog":"Get Catalog",
+  "order":"Order",
+  "design":"Design",
+  "produce":"Produce",
+  "deliver":"Deliver",
+  "install":"Install",
+  "for_your_comfort":"For your comfort!",
+  "submit":"Submit",
+  "name":"Name",
+  "phone_number":"Phone Number",
+  "description":"Description",
+  "goal":"Goals Of The Company",
+  "individual_design":"Furniture according to individual design",
+  "projects":"Projects",
+  "goal_text":"Делать добро людям через производство мебели и наслаждайся ими!"
 }
 

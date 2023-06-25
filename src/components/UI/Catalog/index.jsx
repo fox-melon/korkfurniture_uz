@@ -5,8 +5,8 @@ import styles from "./style.module.scss";
 import { useState } from "react";
 
 export default function Catalog() {
-  const { t } = useTranslation("about");
-  const [phone, ssetPhone] = useState("");
+  const { t } = useTranslation("common");
+  const [phone, setPhone] = useState("");
 
   return (
     <div className={styles.catalog} id="catalog">
@@ -28,10 +28,12 @@ export default function Catalog() {
           <div className={styles.form}>
             <input
               type="tel"
-              placeholder="Raqamingiz"
-              onChange={(e) => ssetPhone(e.target.value)}
+              placeholder={t("phone_number")}
+              onChange={(e) => setPhone(e.target.value)}
             />
-            <button onClick={() => console.log(phone)}>Katalogni olish</button>
+            <button onClick={() => console.log(phone)}>
+              {t("get_catalog")}
+            </button>
           </div>
         </div>
       </Container>

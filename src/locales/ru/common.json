@@ -1,6 +1,20 @@
 {
   "about":   "О нас",
   "client":  "Клиенты",
-  "contact": "Контакты"
+  "our_clients":"Наши клиенты",
+  "contact": "Контакты",
+  "get_catalog":"Получить каталог",
+  "order":"Заказ",
+  "projects":"Проекты",
+  "produce":"Производить",
+  "deliver":"Доставлять",
+  "install":"Установить",
+  "for_your_comfort":"Для вашего удобства!",
+  "submit":"Отправлять",
+  "name":"Имя",
+  "phone_number":"Номер телефона",
+  "description":"Описание",
+  "goal":"Цель компании",
+  "individual_design":"Мебель по индивидуальному проекту"
 }
 

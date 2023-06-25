@@ -4,6 +4,7 @@ import styles from "./style.module.scss";
 import { useState } from "react";
 
 export default function Contact() {
+  const { t } = useTranslation("common");
   const data = [
     {
       id: 1,
@@ -27,7 +28,7 @@ export default function Contact() {
 
   return (
     <div className={styles.contact} id="contact">
-      <h1 className={styles.title}>Biz bilan bog’laning</h1>
+      <h1 className={styles.title}>{t("contact")}</h1>
       <div className={styles.bg}>
         <Container>
           <div className={styles.flex}>
@@ -42,10 +43,10 @@ export default function Contact() {
               })}
             </ul>
             <div className={styles.form}>
-              <input type="text" placeholder="Ismingiz" />
-              <input type="tel" placeholder="Raqamingiz" />
-              <textarea rows="5"></textarea>
-              <button>Jo’natish</button>
+              <input type="text" placeholder={t("name")} />
+              <input type="tel" placeholder={t("phone_number")} />
+              <textarea rows="5" placeholder={t("description")}></textarea>
+              <button>{t("submit")}</button>
             </div>
           </div>
         </Container>

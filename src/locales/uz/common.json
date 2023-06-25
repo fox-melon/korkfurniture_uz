@@ -1,6 +1,21 @@
 {
   "about":   "Biz haqimizda",
   "client":  "Mijozlar",
-  "contact": "Kontaktlar"
+  "our_clients":"Mijozlarimiz",
+  "contact": "Kontaktlar",
+  "get_catalog":"Katalogni olish",
+  "order":"Buyurtma qilish",
+  "design":"Loyihalaymiz",
+  "produce":"Ishlab chiqaramiz",
+  "deliver":"Yetkazib beramiz",
+  "install":"O'rnatamiz",
+  "for_your_comfort":"Halovatingiz uchun!",
+  "submit":"Yuborish",
+  "name":"Ismingiz",
+  "phone_number":"Raqamingiz",
+  "description":"Izoh",
+  "goal":"Kompaniya maqsadi",
+  "individual_design":"Individual dizayn bo’yicha mebellar",
+  "projects":"Bizning loyihalar"
 }
 

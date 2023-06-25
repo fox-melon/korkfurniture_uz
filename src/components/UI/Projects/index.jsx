@@ -2,8 +2,10 @@ import { Container } from "@mui/material";
 import styles from "./style.module.scss";
 import { useState } from "react";
 import { Modal } from "../Modal";
+import useTranslation from "next-translate/useTranslation";
 
 export default function Projects() {
+  const { t } = useTranslation("common");
   const [open, setOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState({});
 
@@ -25,7 +27,7 @@ export default function Projects() {
 
   return (
     <Container>
-      <h1 className={styles.heading}>Bizning loyihalar</h1>
+      <h1 className={styles.heading}>{t("projects")}</h1>
       <div className={styles.gridOne}>
         {dataImg?.map((value) => {
           return (

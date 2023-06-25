@@ -3,6 +3,8 @@ import useTranslation from "next-translate/useTranslation";
 import styles from "./style.module.scss";
 
 export default function About() {
+  const { t } = useTranslation("common");
+
   const data = [
     {
       id: 1,
@@ -26,7 +28,7 @@ export default function About() {
   return (
     <Container id="about">
       <div className={styles.about}>
-        <h1 className={styles.heading}>Biz haqimizda</h1>
+        <h1 className={styles.heading}>{t("about")}</h1>
         <h2 className={styles.question}>
           KORK MEBEL FABRIKASI NIMA ISHLAB CHIQARADI?
         </h2>

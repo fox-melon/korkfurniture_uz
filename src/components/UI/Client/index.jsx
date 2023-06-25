@@ -4,7 +4,7 @@ import styles from "./style.module.scss";
 import Image from "next/image";
 
 export default function Client() {
-  const { t } = useTranslation("about");
+  const { t } = useTranslation("common");
   const data = [
     { id: 1, img: "/images/natGraphLogo.svg" },
     { id: 2, img: "/images/discLogo.svg" },
@@ -17,7 +17,7 @@ export default function Client() {
   ];
   return (
     <Container id="client">
-      <h1 className={styles.heading}>Mijozlarimiz</h1>
+      <h1 className={styles.heading}>{t("our_clients")}</h1>
       <div className={styles.logoWrap}>
         {data.map((item) => {
           return (

@@ -64,8 +64,7 @@ export default function Contact() {
                 );
               })}
             </ul>
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <div className={styles.form}>
+            <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
                 <input
                   type="text"
                   placeholder={t("name")}
@@ -95,7 +94,6 @@ export default function Contact() {
                     Sizga tez orada bog{"'"}lanamiz.
                   </span>
                 )}
-              </div>
             </form>
           </div>
         </Container>

@@ -9,6 +9,9 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 137px 0;
+  gap: 200px;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -19,5 +22,6 @@
   .logoWrap {
     grid-template-columns: repeat(2, 1fr);
     margin: 60px 0;
+    gap: 80px;
   }
 }

@@ -15,14 +15,14 @@ export const Modal = ({ setOpen = () => {}, selectedValue, open }) => {
           onClick={handleClose}
           src="/images/closeGreen.svg"
           className={styles.closeIcon}
+          alt="close"
         />
 
         <div className={styles.flex}>
           {selectedValue?.images?.map((item, index) => (
-            <div className={styles.imgWrap}>
+            <div className={styles.imgWrap} key={index}>
               <Image
                 src={item}
-                key={index}
                 placeholder="blur"
                 blurDataURL="/images/room1.svg"
                 alt="banner"

@@ -32,7 +32,7 @@ export default function Navbar() {
   function handleLanguageChange(selectedLanguage) {
     router.push(router.pathname, router.pathname, { locale: selectedLanguage });
   }
-  
+
   return (
     <header className={styles.navbar} id="navbar">
       <Container>
@@ -47,7 +47,7 @@ export default function Navbar() {
               layout="fixed"
             />
           </Link>
-          <nav className={styles.desctop}>
+          <nav className={styles.desktop}>
             <ul>
               <li>
                 <a href="#about">{t("about")}</a>
@@ -71,9 +71,9 @@ export default function Navbar() {
               </select>
             </div>
 
-            <a href="tel:+998901234567" className={styles.phone}>
+            <a href="tel:+998983100054" className={styles.phone}>
               <PhoneIcon />
-              <p>{"+998 (90) 123-45-67"}</p>
+              <p>{"+998 (98) 310-00-64"}</p>
             </a>
           </div>
         </div>

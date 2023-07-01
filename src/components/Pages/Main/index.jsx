@@ -6,13 +6,13 @@ import Header from "@/components/UI/Header";
 import Projects from "@/components/UI/Projects";
 import Purpose from "@/components/UI/Purpose";
 
-export function Main() {
+export function Main({ projects }) {
   return (
     <main>
       <Header />
       <About />
       <Purpose />
-      <Projects />
+      <Projects projects={projects} />
       <Catalog />
       <Client />
       <Contact />

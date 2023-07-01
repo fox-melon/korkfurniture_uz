@@ -26,7 +26,7 @@
         column-gap: 104px;
         align-items: center;
         text-transform: capitalize;
-        font-size: large;
+        font-size: 22px;
         a {
           transition: all 0.5s;
           position: relative;
@@ -60,7 +60,7 @@
           outline: none;
           background:transparent;
           color: var(--secondary-color);
-          font-size: large;
+          font-size: 23px;
           option {
             background-color: var(--primary-color);
           }
@@ -74,7 +74,6 @@
         border-radius: 6px;
         padding: 0 25px;
         // font-weight: 600px;
-        font-size: large;
         transition: all .2s;
         &:hover {
           background: var(--secondary-color);
@@ -109,7 +108,7 @@
           outline: none;
           background:transparent;
           color: var(--secondary-color);
-          font-size: large;
+          font-size: 23px;
           option {
             background-color: var(--primary-color);
           }

@@ -39,7 +39,6 @@ export default function ScreenCaptureContainer({ children }) {
     setAnchorEl(event.currentTarget)
   }
 
-  console.log('text', text)
 
   const handleCloseEditor = () => {
     setAnchorEl(null)

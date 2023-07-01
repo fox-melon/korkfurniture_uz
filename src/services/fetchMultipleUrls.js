@@ -9,7 +9,7 @@ export const fetchMultipleUrls = async (urls) => {
           const response = await request.get(url)
           return response.data
         } catch (e) {
-          console.log(e)
+          console.log(e,'error')
         }
       })
     )

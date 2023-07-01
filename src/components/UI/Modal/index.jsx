@@ -10,24 +10,27 @@ export const Modal = ({ setOpen = () => {}, selectedValue, open }) => {
   return (
     <Dialog onClose={handleClose} open={open}>
       <div className={styles.dialog}>
-        <h3>
-          {selectedValue.text}
-        </h3>
+        <h3>{selectedValue.name}</h3>
         <img
           onClick={handleClose}
           src="/images/closeGreen.svg"
           className={styles.closeIcon}
         />
 
-        <div className={styles.imgWrap}>
-          <Image
-            src={selectedValue?.src}
-            placeholder="blur"
-            blurDataURL="/images/room1.svg"
-            alt="banner"
-            layout="fill"
-            objectFit="contain"
-          />
+        <div className={styles.flex}>
+          {selectedValue?.images?.map((item, index) => (
+            <div className={styles.imgWrap}>
+              <Image
+                src={item}
+                key={index}
+                placeholder="blur"
+                blurDataURL="/images/room1.svg"
+                alt="banner"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </Dialog>

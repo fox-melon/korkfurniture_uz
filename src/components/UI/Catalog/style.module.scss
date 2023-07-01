@@ -68,6 +68,10 @@
           border: 1px solid var(--secondary-color);
           background-color: var(--primary-color);
         }
+        &:disabled {
+          background-color: #dbae9f;
+          color: grey;
+        }
       }
     }
     .imgWrap {

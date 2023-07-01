@@ -31,7 +31,10 @@ export default function Catalog() {
               placeholder={t("phone_number")}
               onChange={(e) => setPhone(e.target.value)}
             />
-            <button onClick={() => console.log(phone)}>
+            <button
+              onClick={() => console.log(phone)}
+              disabled={phone.length <= 0}
+            >
               {t("get_catalog")}
             </button>
           </div>

@@ -29,6 +29,10 @@ export default function Navbar() {
     },
   ];
 
+  function handleLanguageChange(selectedLanguage) {
+    router.push(router.pathname, router.pathname, { locale: selectedLanguage });
+  }
+  
   return (
     <header className={styles.navbar} id="navbar">
       <Container>
@@ -58,18 +62,15 @@ export default function Navbar() {
           </nav>
           <div className={styles.right}>
             <div className={styles.langs}>
-              <ul>
-                {langs.map((item) => {
-                  return (
-                    <li key={item.key}>
-                      <Link href={router.asPath} locale={item.key}>
-                        <a>{item.label}</a>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
+              <select onChange={(e) => handleLanguageChange(e.target.value)}>
+                {langs.map((item) => (
+                  <option key={item.key} value={item.key}>
+                    {item.label}
+                  </option>
+                ))}
+              </select>
             </div>
+
             <a href="tel:+998901234567" className={styles.phone}>
               <PhoneIcon />
               <p>{"+998 (90) 123-45-67"}</p>
@@ -101,15 +102,13 @@ export default function Navbar() {
             </Link>
           </div>
           <div className={styles.langs}>
-            <ul>
+            <select onChange={(e) => handleLanguageChange(e.target.value)}>
               {langs.map((item) => (
-                <li key={item.key}>
-                  <Link href={router.asPath} locale={item.key}>
-                    <a>{item.label}</a>
-                  </Link>
-                </li>
+                <option key={item.key} value={item.key}>
+                  {item.label}
+                </option>
               ))}
-            </ul>
+            </select>
           </div>
         </div>
       </Container>

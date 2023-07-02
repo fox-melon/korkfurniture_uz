@@ -31,8 +31,8 @@ export default function Contact() {
     {
       id: 1,
       src: "/images/phoneWhite.svg",
-      text: "+998 (90) 123-45-67",
-      href: "tel:+998901234567",
+      text: "+998 (98) 310-00-64",
+      href: "tel:+998983100064",
     },
     {
       id: 2,
@@ -65,35 +65,35 @@ export default function Contact() {
               })}
             </ul>
             <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-                <input
-                  type="text"
-                  placeholder={t("name")}
-                  {...register("name")}
-                />
-                <input
-                  type="tel"
-                  placeholder={t("phone_number")}
-                  {...register("phone_number", {
-                    required: true,
-                    pattern: /[0-9]/,
-                  })}
-                />
-                {errors.phone_number && (
-                  <span style={{ color: "red" }}>
-                    Telefon nomerda xatolik (+998 90 123 34 56)
-                  </span>
-                )}
-                <textarea
-                  rows="5"
-                  placeholder={t("description")}
-                  {...register("description")}
-                ></textarea>
-                <button onSubmit={handleSubmit(onSubmit)}>{t("submit")}</button>
-                {isSucces && (
-                  <span style={{ color: "greenyellow" }}>
-                    Sizga tez orada bog{"'"}lanamiz.
-                  </span>
-                )}
+              <input
+                type="text"
+                placeholder={t("name")}
+                {...register("name")}
+              />
+              <input
+                type="tel"
+                placeholder={t("phone_number")}
+                {...register("phone_number", {
+                  required: true,
+                  pattern: /[0-9]/,
+                })}
+              />
+              {errors.phone_number && (
+                <span style={{ color: "red" }}>
+                  Telefon nomerda xatolik (+998 90 123 34 56)
+                </span>
+              )}
+              <textarea
+                rows="5"
+                placeholder={t("description")}
+                {...register("description")}
+              ></textarea>
+              <button onSubmit={handleSubmit(onSubmit)}>{t("submit")}</button>
+              {isSucces && (
+                <span style={{ color: "greenyellow" }}>
+                  Sizga tez orada bog{"'"}lanamiz.
+                </span>
+              )}
             </form>
           </div>
         </Container>

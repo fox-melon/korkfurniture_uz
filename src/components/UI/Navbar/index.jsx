@@ -39,7 +39,7 @@ export default function Navbar() {
             <Image
               src="/images/logoPng.png"
               priority={true}
-              alt="konk"
+              alt="kork"
               width={120}
               height={50}
               layout="fixed"

@@ -31,12 +31,14 @@ export default function Catalog() {
               placeholder={t("phone_number")}
               onChange={(e) => setPhone(e.target.value)}
             />
-            <button
-              onClick={() => console.log(phone)}
-              disabled={phone.length <= 0}
+            <a
+              href="https://cdn.quickweb.uz/file/06067772-f43d-4474-9c06-a6bd7f62f696.pdf"
+              download="Kork Catalog"
+              target="_blank"
+              rel="noreferrer"
             >
-              {t("get_catalog")}
-            </button>
+              <button disabled={phone.length <= 0}>{t("get_catalog")}</button>
+            </a>
           </div>
         </div>
       </Container>

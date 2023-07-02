@@ -7,6 +7,7 @@ import styles from "./style.module.scss";
 import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";
 import PhoneIcon from "./PhoneIcon";
+import Link from "next/link";
 export default function Navbar() {
   const router = useRouter();
   const { t } = useTranslation("common");
@@ -35,7 +36,7 @@ export default function Navbar() {
     <header className={styles.navbar} id="navbar">
       <Container>
         <div className={styles.box}>
-          <a href={"/"} className={styles.logo}>
+          <Link href="/" className={styles.logo}>
             <Image
               src="/images/logoPng.png"
               priority={true}
@@ -44,7 +45,7 @@ export default function Navbar() {
               height={50}
               layout="fixed"
             />
-          </a>
+          </Link>
           <nav className={styles.desktop}>
             <ul>
               <li>
@@ -86,7 +87,7 @@ export default function Navbar() {
               height={24}
               onClick={() => setIsOpen(true)}
             />
-            <a href="/" className={styles.logo}>
+            <Link href="/" className={styles.logo}>
                <Image
                 src="/images/logoPng.png"
                 priority={true}
@@ -95,7 +96,7 @@ export default function Navbar() {
                 height={32}
                 layout="fixed"
               />
-            </a>
+            </Link>
           </div>
           <div className={styles.langs}>
             <select onChange={(e) => handleLanguageChange(e.target.value)}>

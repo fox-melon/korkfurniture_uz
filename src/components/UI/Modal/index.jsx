@@ -22,6 +22,7 @@ export const Modal = ({ setOpen = () => {}, selectedValue, open }) => {
           {selectedValue?.images?.map((item, index) => (
             <div className={styles.imgWrap} key={index}>
               <Image
+                key={index}
                 src={item}
                 placeholder="blur"
                 blurDataURL="/images/room1.svg"

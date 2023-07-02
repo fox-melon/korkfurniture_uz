@@ -3,6 +3,7 @@ import { Container } from "@mui/material";
 import styles from "./style.module.scss";
 import Slider from "react-slick";
 import useTranslation from "next-translate/useTranslation";
+import { useRouter } from "next/router";
 
 export default function Header() {
   const { t } = useTranslation("common");
@@ -33,7 +34,9 @@ export default function Header() {
               </div>
             ))}
           </Slider>
-          <button className={styles.btn}>{t("order")}</button>
+          <a href="#contact">
+            <button className={styles.btn}>{t("order")}</button>
+          </a>
         </div>
       </Container>
     </div>

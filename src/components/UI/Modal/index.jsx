@@ -1,6 +1,5 @@
 import Dialog from "@mui/material/Dialog";
 import styles from "./style.module.scss";
-import Image from "next/image";
 
 export const Modal = ({ setOpen = () => {}, selectedValue, open }) => {
   const handleClose = () => {
@@ -18,21 +17,33 @@ export const Modal = ({ setOpen = () => {}, selectedValue, open }) => {
           alt="close"
         />
 
-        <div className={styles.flex}>
-          {selectedValue?.images?.map((item, index) => (
-            <div className={styles.imgWrap} key={index}>
-              <Image
-                src={item}
-                placeholder="blur"
-                blurDataURL="/images/room1.svg"
-                alt="banner"
-                layout="fill"
-                objectFit="contain"
-              />
-            </div>
+        <div
+          className={styles.flex}
+          style={checkStyle(selectedValue?.images?.length)}
+        >
+          {selectedValue?.images?.map((item) => (
+            <img src={item} alt="banner" />
           ))}
         </div>
       </div>
     </Dialog>
   );
+};
+
+const checkStyle = (length) => {
+  switch (length) {
+    case 1:
+      return {
+        gridTemplateColumns: "auto",
+      };
+    case 2:
+      return {
+        gridTemplateColumns: "40% 15% 40%",
+      };
+    default:
+      return {
+        gridTemplateColumns: "40% 15% 40%",
+        gridTemplateRows: "repeat(3, 25vw)",
+      };
+  }
 };

@@ -136,7 +136,7 @@ export default function ScreenCaptureContainer({ children }) {
                 grid: false,
                 interface: true
               }}
-              ref={canvasRef}
+              // ref={canvasRef}
             />
           </div>
 

@@ -87,7 +87,6 @@ export default function Navbar() {
               onClick={() => setIsOpen(true)}
             />
             <a href="/" className={styles.logo}>
-            
                <Image
                 src="/images/logoPng.png"
                 priority={true}

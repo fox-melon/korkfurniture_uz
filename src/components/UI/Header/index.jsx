@@ -26,7 +26,7 @@ export default function Header() {
               t("install"),
               t("for_your_comfort"),
             ].map((el, index) => (
-              <div className={styles.sliderWrap}>
+              <div className={styles.sliderWrap} key={index}>
                 <span key={index} className={styles.item}>
                   {el}
                 </span>

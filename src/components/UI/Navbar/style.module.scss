@@ -30,6 +30,7 @@
         a {
           transition: all 0.5s;
           position: relative;
+          white-space: nowrap;
           &::before {
             position: absolute;
             content: "";

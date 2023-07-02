@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/link-passhref */
 import styles from "./style.module.scss";
-import Link from "next/link";
 import { Container } from "@mui/material";
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
@@ -12,7 +11,7 @@ export default function Footer() {
       <footer className={styles.footer} id="footer">
         <Container>
           <div className={styles.box}>
-            <Link href="/">
+            <a href={"/"}>
               <Image
                 src={"/images/logo.svg"}
                 priority={true}
@@ -21,7 +20,7 @@ export default function Footer() {
                 height={50}
                 layout="fixed"
               />
-            </Link>
+            </a>
             <nav>
               <ul>
                 <li>

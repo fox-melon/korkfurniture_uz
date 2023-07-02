@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/link-passhref */
 import { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import RightMenu from "../RightMenu/RightMenu";
 import { Container } from "@mui/material";
@@ -8,7 +7,6 @@ import styles from "./style.module.scss";
 import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";
 import PhoneIcon from "./PhoneIcon";
-
 export default function Navbar() {
   const router = useRouter();
   const { t } = useTranslation("common");
@@ -37,16 +35,16 @@ export default function Navbar() {
     <header className={styles.navbar} id="navbar">
       <Container>
         <div className={styles.box}>
-          <Link href="/" className={styles.logo}>
+          <a href={"/"} className={styles.logo}>
             <Image
-              src={"/images/logo.svg"}
+              src="/images/logoPng.png"
               priority={true}
               alt="konk"
               width={120}
               height={50}
               layout="fixed"
             />
-          </Link>
+          </a>
           <nav className={styles.desktop}>
             <ul>
               <li>
@@ -88,18 +86,17 @@ export default function Navbar() {
               height={24}
               onClick={() => setIsOpen(true)}
             />
-            <Link href={"/"}>
-              <a>
-                <Image
-                  className={styles.logo}
-                  src={"/images/logo.svg"}
-                  priority={true}
-                  alt="konk"
-                  width={80}
-                  height={32}
-                />
-              </a>
-            </Link>
+            <a href="/" className={styles.logo}>
+            
+               <Image
+                src="/images/logoPng.png"
+                priority={true}
+                alt="konk"
+                width={80}
+                height={32}
+                layout="fixed"
+              />
+            </a>
           </div>
           <div className={styles.langs}>
             <select onChange={(e) => handleLanguageChange(e.target.value)}>

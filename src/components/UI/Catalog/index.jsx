@@ -2,6 +2,7 @@
 import { Container } from "@mui/material";
 import useTranslation from "next-translate/useTranslation";
 import styles from "./style.module.scss";
+import { useState } from "react";
 
 export default function Catalog() {
   const { t } = useTranslation("common");

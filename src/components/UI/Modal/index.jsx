@@ -21,8 +21,8 @@ export const Modal = ({ setOpen = () => {}, selectedValue, open }) => {
           className={styles.flex}
           style={checkStyle(selectedValue?.images?.length)}
         >
-          {selectedValue?.images?.map((item) => (
-            <img src={item} alt="banner" />
+          {selectedValue?.images?.map((item, index) => (
+            <img src={item} alt="banner" key={index} />
           ))}
         </div>
       </div>

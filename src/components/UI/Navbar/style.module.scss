@@ -26,13 +26,14 @@
         column-gap: 104px;
         align-items: center;
         text-transform: capitalize;
+        font-size: 22px;
         a {
           transition: all 0.5s;
           position: relative;
           &::before {
             position: absolute;
             content: "";
-            height: 3px;
+            height: 5px;
             width: 100%;
             bottom: -10px;
             background: var(--secondary-color);
@@ -59,7 +60,7 @@
           outline: none;
           background:transparent;
           color: var(--secondary-color);
-          font-size: 16px;
+          font-size: 23px;
           option {
             background-color: var(--primary-color);
           }
@@ -72,7 +73,7 @@
         border: 1px solid var(--secondary-color);
         border-radius: 6px;
         padding: 0 25px;
-        font-weight: 500;
+        // font-weight: 600px;
         transition: all .2s;
         &:hover {
           background: var(--secondary-color);
@@ -107,7 +108,7 @@
           outline: none;
           background:transparent;
           color: var(--secondary-color);
-          font-size: 16px;
+          font-size: 23px;
           option {
             background-color: var(--primary-color);
           }

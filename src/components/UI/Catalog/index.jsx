@@ -2,32 +2,10 @@
 import { Container } from "@mui/material";
 import useTranslation from "next-translate/useTranslation";
 import styles from "./style.module.scss";
-import { useRef, useState } from "react";
 
 export default function Catalog() {
-  const [file, setFile] = useState(null);
-  const blobRef = useRef(null);
   const { t } = useTranslation("common");
   const [phone, setPhone] = useState("");
-  const downloadFile = () => {
-    const xhr = new XMLHttpRequest();
-    xhr.open(
-      "GET",
-      "https://cdn.quickweb.uz/file/06067772-f43d-4474-9c06-a6bd7f62f696.pdf",
-      true
-    );
-    xhr.responseType = "blob";
-    xhr.onload = () => {
-      if (xhr.status === 200) {
-        const blob = xhr.response;
-        setFile(blob);
-        blobRef.current.href = URL.createObjectURL(blob);
-        blobRef.current.download = "Kork-Catalog.pdf";
-        blobRef.current.click();
-      }
-    };
-    xhr.send();
-  };
 
   return (
     <div className={styles.catalog} id="catalog">

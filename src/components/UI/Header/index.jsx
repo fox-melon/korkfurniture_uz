@@ -1,15 +1,13 @@
 /* eslint-disable react/jsx-key */
-import { Container } from "@mui/material";
 import styles from "./style.module.scss";
 import Slider from "react-slick";
 import useTranslation from "next-translate/useTranslation";
-import { useRouter } from "next/router";
 
 export default function Header() {
   const { t } = useTranslation("common");
   return (
     <div className={styles.header} id="header">
-      <Container>
+      <div className={styles.flex}>
         <div className={styles.textWrap}>
           <h1 className={styles.heading}>{t("individual_design")}</h1>
           <Slider
@@ -38,7 +36,15 @@ export default function Header() {
             <button className={styles.btn}>{t("order")}</button>
           </a>
         </div>
-      </Container>
+        <div className={styles.imgWrap}>
+          <img src={"/images/headerImg.svg"} />
+        </div>
+      </div>
+      <div className={styles.btnMobile}>
+        <a href="#contact">
+          <button className={styles.btn}>{t("order")}</button>
+        </a>
+      </div>
     </div>
   );
 }

@@ -3,6 +3,7 @@
 .header {
   width: 100%;
   min-height: 50vh;
+  height: 90vh;
   max-height: 100vh;
   background: linear-gradient(
     90deg,
@@ -24,8 +25,10 @@
     }
     .textWrap {
       flex: 3;
-      padding: 16rem 100px 0 0;
+      padding-right: 100px;
       width: 45vw;
+      height: fit-content;
+      margin: auto;
       background: #faf9f4;
       text-transform: uppercase;
       .sliderWrap {

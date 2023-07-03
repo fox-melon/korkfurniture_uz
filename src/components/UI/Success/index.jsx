@@ -7,10 +7,10 @@ export const SuccessModal = ({ setOpen = () => {}, open }) => {
   };
 
   return (
-    <Dialog onClose={handleClose} open={open} id='successModal'>
+    <Dialog onClose={handleClose} open={open} id="successModal">
       <div className={styles.dialog}>
         <img
-          onClick={handleClose}
+          onClick={handleClose} 
           src="/images/closeGreen.svg"
           className={styles.closeIcon}
           alt="close"
@@ -19,7 +19,7 @@ export const SuccessModal = ({ setOpen = () => {}, open }) => {
 
         <p className={styles.text}>
           Murojaatingiz uchun rahmat <br />
-          siz bilan tez orada bog'lanamiz!
+          siz bilan tez orada bog{`'`}lanamiz!
         </p>
       </div>
     </Dialog>

@@ -37,7 +37,7 @@ export default function Header() {
           </a>
         </div>
         <div className={styles.imgWrap}>
-          <img src={"/images/headerImg.svg"} />
+          <img src={"/images/headerImg.svg"} alt="header bg img "/>
         </div>
       </div>
       <div className={styles.btnMobile}>

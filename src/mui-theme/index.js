@@ -28,8 +28,18 @@ export default createTheme({
         },
       },
       maxWidthLg: {
-        "@media (min-width: 1280px)": {
+        "@media (min-width: 1500px)": {
           maxWidth: "1560px",
+        },
+      },
+      maxWidthLg: {
+        "@media (min-width: 1024px)": {
+          maxWidth: "1224px",
+        },
+      },
+      maxWidthLg: {
+        "@media (min-width: 961px)": {
+          maxWidth: "1120px",
         },
       },
     },

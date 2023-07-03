@@ -16,21 +16,18 @@ export default function Client() {
       .then((res) => setData(res?.data));
   }, []);
 
-  
   return (
     <Container id="client">
       <h1 className={styles.heading}>{t("our_clients")}</h1>
       <div className={styles.logoWrap}>
         {data ? (
           data?.data.map((item, index) => (
-            <Image
-              key={index}
-              src={item.logo}
-              alt="brand"
-              width={372}
-              height={152}
-              layout="responsive"
-            />
+            <div className={styles.imgWrap} key={index}>
+              <img
+                src={item.logo}
+                alt="brand"
+              />
+            </div>
           ))
         ) : (
           <>

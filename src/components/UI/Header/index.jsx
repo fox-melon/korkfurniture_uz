@@ -16,7 +16,7 @@ export default function Header() {
             autoplay={true}
             arrows={false}
             adaptiveHeight={true}
-            autoplaySpeed={3000}
+            autoplaySpeed={1500}
           >
             {[
               t("design"),

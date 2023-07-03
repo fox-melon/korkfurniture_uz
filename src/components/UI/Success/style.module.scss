@@ -1,0 +1,49 @@
+.dialog {
+  min-height: 20vh;
+  padding: 120px 180px;
+  background-color: white;
+  position: relative;
+  text-align: center;
+  color: var(--primary-color);
+  img {
+    width: 104px;
+  }
+  .text {
+    font-size: 1.5rem;
+    line-height: 150%;
+    font-weight: 500;
+  }
+  .closeIcon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 80px;
+  }
+}
+
+
+@media (max-width: 1441px) {
+  .dialog {
+    padding: 50px 80px;
+    img {
+      width: 70px;
+    }
+    .closeIcon {
+      width: 50px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .dialog {
+    padding:40px  50px;
+    .text {
+      font-size: 16px;
+    }
+    img {
+      width: 50px;
+    }
+    .closeIcon {
+      width: 40px;
+    }
+  }
+}

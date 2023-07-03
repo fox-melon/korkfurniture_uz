@@ -4,6 +4,7 @@ import styles from "./style.module.scss";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { SuccessModal } from "../Success";
 
 export default function Contact() {
   const [isSucces, setIsSuccess] = useState(false);
@@ -89,11 +90,7 @@ export default function Contact() {
                 {...register("description")}
               ></textarea>
               <button onSubmit={handleSubmit(onSubmit)}>{t("submit")}</button>
-              {isSucces && (
-                <span style={{ color: "greenyellow" }}>
-                  Sizga tez orada bog{"'"}lanamiz.
-                </span>
-              )}
+              {isSucces && <SuccessModal  open={isSucces} setOpen={setIsSuccess}/>}
             </form>
           </div>
         </Container>

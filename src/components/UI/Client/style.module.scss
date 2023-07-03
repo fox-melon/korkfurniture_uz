@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  margin: 137px 0;
+  margin: 137px;
   gap: 150px;
   justify-content: center;
   align-items: center;
@@ -18,6 +18,12 @@
       width: 100%;
       height: 100%;
     }
+  }
+}
+@media (max-width: 1441px) {
+  .logoWrap {
+    margin-top: 100px;
+    gap: 100px;
   }
 }
 

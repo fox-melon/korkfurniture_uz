@@ -93,6 +93,30 @@
   }
 }
 
+@media (max-width: 1025px) {
+  .header {
+    height: 90vh;
+    .flex {
+      .textWrap {
+        padding-top: 5rem;
+        .heading {
+          margin-left: 100px;
+        }
+        .sliderWrap {
+         height: 148px;
+         margin-bottom: 30px;
+          .item {
+            padding-left: 100px;
+          }
+        }
+        .btn {
+          margin-left: 100px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 769px) {
   .header {
     .flex {
@@ -154,5 +178,4 @@
       }
     }
   }
-  
 }

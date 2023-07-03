@@ -12,11 +12,27 @@ const nextConfig = nextTranslate({
   images: {
     domains: ['cdn.quickweb.uz'],
   },
-  // env: {
-  //   BASE_URL: baseUrl,
-  // },
-
-
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+        ],
+      },
+    ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://api.example.com/:path*',
+      },
+    ]
+  },
 })
 
 module.exports = nextConfig

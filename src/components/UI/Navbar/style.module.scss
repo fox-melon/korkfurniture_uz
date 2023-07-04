@@ -59,7 +59,7 @@
         select {
           border: none;
           outline: none;
-          background:transparent;
+          background: transparent;
           color: var(--secondary-color);
           font-size: 23px;
           option {
@@ -74,8 +74,7 @@
         border: 1px solid var(--secondary-color);
         border-radius: 6px;
         padding: 0 25px;
-        // font-weight: 600px;
-        transition: all .2s;
+        transition: all 0.2s;
         &:hover {
           background: var(--secondary-color);
           color: var(--primary-color);
@@ -88,6 +87,27 @@
   }
 }
 
+@media (min-width: 1025px) and ( max-width: 1560px) {
+  .navbar {
+    .box {
+      nav {
+        ul {
+          font-size: 16px;
+        }
+      }
+      .right {
+        .langs {
+          select {
+            font-size: 16px;
+          }
+        }
+        .phone {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 1025px) {
   .navbar {
     .box {
@@ -107,12 +127,24 @@
         select {
           border: none;
           outline: none;
-          background:transparent;
+          background: transparent;
           color: var(--secondary-color);
           font-size: 23px;
           option {
             background-color: var(--primary-color);
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    .mobile {
+      .langs {
+        select {
+          font-size: 16px;
         }
       }
     }

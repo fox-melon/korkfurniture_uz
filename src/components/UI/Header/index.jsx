@@ -2,6 +2,7 @@
 import styles from "./style.module.scss";
 import Slider from "react-slick";
 import useTranslation from "next-translate/useTranslation";
+import { Container } from "@mui/material";
 
 export default function Header() {
   const { t } = useTranslation("common");
@@ -37,13 +38,8 @@ export default function Header() {
           </a>
         </div>
         <div className={styles.imgWrap}>
-          <img src={"/images/headerImg.svg"} alt="header bg img "/>
+          <img src={"/images/headerImg.svg"} alt="header bg img " />
         </div>
-      </div>
-      <div className={styles.btnMobile}>
-        <a href="#contact">
-          <button className={styles.btn}>{t("order")}</button>
-        </a>
       </div>
     </div>
   );

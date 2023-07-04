@@ -57,11 +57,12 @@
         padding: 26px 48px;
         background-color: #bd907d;
         color: var(--text-color);
-        font-weight: 600;
+        font-weight: 500;
         font-size: 24px;
         border-radius: 100px;
         border: none;
         transition: all 0.2s;
+        text-transform: uppercase;
         &:hover {
           background: #bd907d;
           box-shadow: 0px 10px 40px rgba(166, 74, 74, 0.4);
@@ -69,48 +70,35 @@
       }
     }
   }
-  .btnMobile {
-    display: none;
-  }
 }
-@media (max-width: 1441px) {
+@media (min-width: 1100px) {
   .header {
     height: 90vh;
     .flex {
+      .imgWrap {
+        border-left-width: 16px;
+        border-right-width: 16px;
+      }
       .textWrap {
-        padding-top: 10rem;
+          margin-top: 200px;
         .heading {
-          font-size: 45px;
-          line-height: 130%;
-          overflow: auto;
+          font-size: 56px;
+          line-height: 110%;
+          margin: 0 0 12px 95px;
+        }
+        .sliderWrap {
+          margin-bottom: 64px;
         }
         .item {
           font-size: 45px;
           line-height: 130%;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1025px) {
-  .header {
-    height: 90vh;
-    .flex {
-      .textWrap {
-        padding-top: 5rem;
-        .heading {
-          margin-left: 100px;
-        }
-        .sliderWrap {
-         height: 148px;
-         margin-bottom: 30px;
-          .item {
-            padding-left: 100px;
-          }
+          padding: 16px 49px 16px 95px;
+          height: 130%;
         }
         .btn {
-          margin-left: 100px;
+          margin-left: 95px;
+          font-size: 24px;
+          padding: 18px 32px;
         }
       }
     }
@@ -119,61 +107,51 @@
 
 @media (max-width: 769px) {
   .header {
+    max-height: fit-content;
+    height: 120vh;
+    background: rgba(0, 62, 62, 1);
     .flex {
-      height: fit-content;
+      flex-direction: column;
       .imgWrap {
-        width: 50%;
-        border-width: 2px;
+        height: 50vh;
+        border-width: 8px;
         padding-right: 4vw;
         margin-right: 2vw;
         img {
+          height: 50vh;
           width: 100%;
           object-fit: cover;
-          object-position: right;
+          object-position: bottom;
         }
       }
       .textWrap {
-        padding: 132px 16px 0 0;
-        height: 70vh;
+        padding: 104px 16px 0 0;
+        margin: 0;
+        width: auto;
         .heading {
           margin-left: 16px;
           font-size: 32px;
           line-height: 130%;
+          letter-spacing: 1px;
+          margin-bottom: 0;
         }
         .item {
           padding: 8px 24px 8px 16px;
-        }
-        .btn {
-          display: none;
-        }
-        .sliderWrap {
-          margin: 16px 0 60px;
-        }
-        .item {
           font-size: 25px;
           line-height: 35px;
         }
-      }
-    }
-    .btnMobile {
-      display: block;
-      padding: 40px 16px 72px 16px;
-      background-color: #faf9f4;
-      .btn {
-        width: 100%;
-        padding: 22px;
-        background-color: #bd907d;
-        color: var(--text-color);
-        font-weight: 500;
-        letter-spacing: 1px;
-        font-size: 14px;
-        text-transform: uppercase;
-        border-radius: 10px;
-        border: none;
-        transition: all 0.2s;
-        &:hover {
-          background: #bd907d;
-          box-shadow: 0px 10px 40px rgba(166, 74, 74, 0.4);
+        .btn {
+          display: block;
+          padding: 20px;
+          font-size: 14px;
+          margin: 0 auto;
+          margin-bottom: 60px;
+          letter-spacing: 1px;
+          width: 90%;
+        }
+        .sliderWrap {
+          margin: 8px 0 50px;
+          height: fit-content;
         }
       }
     }

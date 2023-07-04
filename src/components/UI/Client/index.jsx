@@ -1,7 +1,6 @@
 import { Container } from "@mui/material";
 import useTranslation from "next-translate/useTranslation";
 import styles from "./style.module.scss";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Skeleton from "@mui/material/Skeleton";
@@ -24,7 +23,7 @@ export default function Client() {
           data?.data.map((item, index) => (
             <div className={styles.imgWrap} key={index}>
               <img
-                src={item.logo}
+                src={item.logo || "/images/noImg2.jpg"}
                 alt="brand"
               />
             </div>
@@ -41,3 +40,6 @@ export default function Client() {
     </Container>
   );
 }
+
+
+//  || or no img 

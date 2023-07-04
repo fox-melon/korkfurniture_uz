@@ -28,13 +28,11 @@ export default createTheme({
         },
       },
       maxWidthLg: {
+        "@media (min-width: 961px)": {
+          maxWidth: "1280px",
+        },
         "@media (min-width: 1500px)": {
           maxWidth: "1560px",
-        },
-      },
-      maxWidthLg: {
-        "@media (min-width: 1100px)": {
-          maxWidth: "1300px",
         },
       },
     },
@@ -58,3 +56,7 @@ export default createTheme({
     }
   }
 })
+
+
+// modal open 
+// 

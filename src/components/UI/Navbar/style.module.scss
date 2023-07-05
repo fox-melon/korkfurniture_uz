@@ -1,6 +1,9 @@
 @import "@/styles/unit.scss";
 
 .navbar {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
   background-color: var(--primary-color);
   height: rem(80);
   display: flex;

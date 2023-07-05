@@ -14,13 +14,11 @@ export default function Catalog() {
         <div className={styles.grid}>
           <div className={styles.textWrap}>
             <p className={styles.topText}>
-              <span className={styles.line}></span> Bu barcha loyihalarimiz emas
+              <span className={styles.line}></span> {t("not_all")}
             </p>
 
-            <h1 className={styles.title}>G'oyalardan ilhom oling</h1>
-            <p className={styles.desc}>
-              Formani to'ldiring va biz sizga katalog yuboramiz
-            </p>
+            <h1 className={styles.title}>{t("by_idea")}</h1>
+            <p className={styles.desc}>{t("send_catalog")}</p>
           </div>
           <div className={styles.imgWrap}>
             <img src={"/images/book.svg"} alt="book" />

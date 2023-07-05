@@ -8,10 +8,7 @@ export default function Purpose() {
     <div className={styles.purpose}>
       <Container>
         <h1 className={styles.heading}>{t("goal")}</h1>
-        <h2 className={styles.desc}>
-          Mebel ishlab chiqarish orqali insonlarga yaxshilik qilish va <br />{" "}
-          ularga halovat ulashish!
-        </h2>
+        <h2 className={styles.desc}>{t("goalText")}</h2>
       </Container>
     </div>
   );

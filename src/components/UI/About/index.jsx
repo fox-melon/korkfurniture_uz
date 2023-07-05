@@ -9,33 +9,28 @@ export default function About() {
     {
       id: 1,
       src: "/images/horeca.svg",
-      title: "HoReCa",
-      text: "Mehmonxona, restoran, kafelar",
+      title: t("produceOneTitle"),
+      text:  t("produceOneText"),
     },
     {
       id: 2,
       src: "/images/education.svg",
-      title: "Ta’lim muassasalari",
-      text: "O’quv markazlari, maktab va bog’chalar",
+      title: t("produceTwoTitle"),
+      text:  t("produceTwoText"),
     },
     {
       id: 3,
       src: "/images/ofis.svg",
-      title: "Boshqaruv ofislari",
-      text: "Kichik va katta turdagi kompaniyalar va biznes markazlar",
+      title: t("produceThreeTitle"),
+      text:  t("produceThreeText"),
     },
   ];
   return (
     <Container id="about">
       <div className={styles.about}>
         <h1 className={styles.heading}>{t("about")}</h1>
-        <h2 className={styles.question}>
-          KORK MEBEL FABRIKASI NIMA ISHLAB CHIQARADI?
-        </h2>
-        <p className={styles.questionBottomText}>
-          Fabrikamiz asosan quyidagi faoliyat turlari uchun mebel ishlab
-          chiqarishdan iborat
-        </p>
+        <h2 className={styles.question}>{t("what_produce")}</h2>
+        <p className={styles.questionBottomText}>{t("produce_is")}</p>
         <div className={styles.types}>
           {data?.map((value) => {
             return (
@@ -51,16 +46,8 @@ export default function About() {
         </div>
         <div className={styles.block}>
           <div className={styles.textWrap}>
-            <h2 className={styles.title}>
-              Avtomatizatsiya “БАЗИС МЕБЕЛЬЩИК”
-              <br /> Biz bilan!
-            </h2>
-            <p className={styles.text}>
-              Mebel ishlab chiqarishdagi eng muhim jarayon, mebel kontruksiyasi
-              qilishdir. Ushbu jarayon, aynan mebel konstrusiyalarini amalga
-              oshirishga mo’ljallangan Bazis dasturi yordamida qilinadi. Bu esa
-              mahsulotlarimiz sifatiga katta ta’sir o’tkazadi
-            </p>
+            <h2 className={styles.title}>{t("automationTitle")}</h2>
+            <p className={styles.text}>{t("automationText")}</p>
           </div>
           <div className={styles.imgWrap}>
             <img src={"/images/aboutImg.svg"} alt="БАЗИС МЕБЕЛЬЩИК" />

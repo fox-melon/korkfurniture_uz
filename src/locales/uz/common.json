@@ -3,7 +3,7 @@
   "client": "Mijozlar",
   "contact": "Kontaktlar",
   "individual_design": "Individual dizayn bo’yicha mebellar",
-  "design": "Loyihalaymiz",
+  "design": " Loyihalaymiz",
   "produce": "Ishlab chiqaramiz",
   "install": "O'rnatamiz",
   "deliver": "Yetkazib beramiz",
@@ -32,5 +32,6 @@
   "name": "Ismingiz",
   "description": "Izoh",
   "submit": "Yuborish",
+  "error_phone":"Telefon nomerda xatolik (+998 90 123 34 56)",
   "address":"Yunusobod tumani, mahallasi, 7 uy"
 }

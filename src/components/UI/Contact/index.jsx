@@ -80,9 +80,7 @@ export default function Contact() {
                 })}
               />
               {errors.phone_number && (
-                <span style={{ color: "red" }}>
-                  Telefon nomerda xatolik (+998 90 123 34 56)
-                </span>
+                <span style={{ color: "red" }}>{t("error_phone")}</span>
               )}
               <textarea
                 rows="5"
@@ -90,7 +88,9 @@ export default function Contact() {
                 {...register("description")}
               ></textarea>
               <button onSubmit={handleSubmit(onSubmit)}>{t("submit")}</button>
-              {isSucces && <SuccessModal  open={isSucces} setOpen={setIsSuccess}/>}
+              {isSucces && (
+                <SuccessModal open={isSucces} setOpen={setIsSuccess} />
+              )}
             </form>
           </div>
         </Container>

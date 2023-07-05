@@ -4,12 +4,17 @@ import Slider from "react-slick";
 import useTranslation from "next-translate/useTranslation";
 
 export default function Header() {
-  const { t } = useTranslation("common");
+  const { t, lang } = useTranslation("common");
   return (
     <div className={styles.header} id="header">
       <div className={styles.flex}>
         <div className={styles.textWrap}>
-          <h1 className={styles.heading}>{t("individual_design")}</h1>
+          {lang === "en" || lang === "ru" ? (
+            ""
+          ) : (
+            <h1 className={styles.heading}>{t("individual_design")}</h1>
+          )}
+
           <Slider
             lazyLoad={true}
             infinite={true}
@@ -32,6 +37,11 @@ export default function Header() {
               </div>
             ))}
           </Slider>
+          {lang === "en" || lang === "ru" ? (
+            <h1 className={styles.heading}>{t("individual_design")}</h1>
+          ) : (
+            ""
+          )}
           <a href="#contact">
             <button className={styles.btn}>{t("order")}</button>
           </a>

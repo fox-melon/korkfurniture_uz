@@ -2,8 +2,8 @@
   "about": "О нас",
   "client": "Клиенты",
   "contact": "Контакты",
-  "individual_design": "Мы проектируем мебель по индивидуальному проекту",
-  "design": "Loyihalaymiz",
+  "individual_design": "МЕБЕЛЬ ПО  ИНДИВИДУАЛЬНОМУ  ДИЗАЙНУ",
+  "design": "Проектируем",
   "produce": "Производим",
   "install": "Устанавливаем",
   "deliver": "Доставляем",
@@ -32,5 +32,6 @@
   "name": "Имя",
   "description": "Описание",
   "submit": "Отправлять",
-  "address":"Yunusobod tumani, mahallasi, 7 uy"
+  "error_phone":"В номере телефона ошибка (+998 90 123 34 56)",
+  "address":"А. Яссавий МФЙ, ул. Охакчилар,  1-я улица, дом 2а"
 }

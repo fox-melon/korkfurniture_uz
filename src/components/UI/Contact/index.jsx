@@ -16,7 +16,6 @@ export default function Contact() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data);
     try {
       let res = await axios.get(
         `https://korkfurniture.uz/api/bot?full_name=${data.name}&phone_number=${data.phone_number}&description=${data.description}`
@@ -44,7 +43,7 @@ export default function Contact() {
     {
       id: 3,
       src: "/images/location.svg",
-      text: "Yunusobod tumani, mahallasi, 7 uy",
+      text: t("address"),
     },
     { id: 4, src: "/images/clock.svg", text: "09:00 - 18:00" },
   ];

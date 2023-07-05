@@ -32,7 +32,7 @@
       background: #faf9f4;
       text-transform: uppercase;
       .sliderWrap {
-        margin-bottom: 88px;
+        // margin-bottom: 88px;
         border: 2px solid transparent;
       }
       .heading {
@@ -81,13 +81,14 @@
       }
       .textWrap {
           margin-top: 200px;
+          display: grid;
+          width: 56vw;
+          grid-template-columns: 50vw;
+          gap: 64px;
         .heading {
           font-size: 56px;
           line-height: 110%;
           margin: 0 0 12px 95px;
-        }
-        .sliderWrap {
-          margin-bottom: 64px;
         }
         .item {
           font-size: 45px;
@@ -128,17 +129,20 @@
         padding: 104px 16px 0 0;
         margin: 0;
         width: auto;
+        gap: 30px;
         .heading {
-          margin-left: 16px;
           font-size: 32px;
           line-height: 130%;
           letter-spacing: 1px;
-          margin-bottom: 0;
+          margin: 0px 0 30px 16px;
         }
         .item {
           padding: 8px 24px 8px 16px;
           font-size: 25px;
           line-height: 35px;
+        }
+        .sliderWrap {
+          margin-bottom: 30px;
         }
         .btn {
           display: block;
@@ -149,10 +153,7 @@
           letter-spacing: 1px;
           width: 90%;
         }
-        .sliderWrap {
-          margin: 8px 0 50px;
-          height: fit-content;
-        }
+        
       }
     }
   }

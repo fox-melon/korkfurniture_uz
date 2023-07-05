@@ -49,13 +49,13 @@ export default function Navbar() {
           <nav className={styles.desktop}>
             <ul>
               <li>
-                <a href="#about">{t("about")}</a>
+                <Link href="#about">{t("about")}</Link>
               </li>
               <li>
-                <a href="#client">{t("client")}</a>
+                <Link href="#client">{t("client")}</Link>
               </li>
               <li>
-                <a href="#contact">{t("contact")}</a>
+                <Link href="#contact">{t("contact")}</Link>
               </li>
             </ul>
           </nav>

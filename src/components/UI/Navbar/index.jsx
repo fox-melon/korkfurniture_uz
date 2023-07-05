@@ -10,7 +10,7 @@ import PhoneIcon from "./PhoneIcon";
 import Link from "next/link";
 export default function Navbar() {
   const router = useRouter();
-  const { t } = useTranslation("common");
+  const { t, lang } = useTranslation("common");
   const [isOpen, setIsOpen] = useState(false);
 
   const langs = [
@@ -61,7 +61,13 @@ export default function Navbar() {
           </nav>
           <div className={styles.right}>
             <div className={styles.langs}>
-              <select onChange={(e) => handleLanguageChange(e.target.value)}>
+              <select
+                id="lang"
+                className="lang"
+                onChange={(e) => handleLanguageChange(e.target.value)}
+                defaultValue="en"
+                value={lang}
+              >
                 {langs.map((item) => (
                   <option key={item.key} value={item.key}>
                     {item.label}
@@ -88,7 +94,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(true)}
             />
             <Link href="/" className={styles.logo}>
-               <Image
+              <Image
                 src="/images/logoPng.png"
                 priority={true}
                 alt="konk"

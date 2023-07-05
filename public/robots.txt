@@ -1,0 +1,13 @@
+User-Agent: *
+Sitemap: https://korkfurniture.uz/sitemap.xml
+
+User-Agent: Yandex
+Sitemap: https://korkfurniture.uz/sitemap.xml
+
+User-agent: Googlebot
+Sitemap: https://korkfurniture.uz/sitemap.xml
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.png
+Allow: /*.js
+Allow: /*.css

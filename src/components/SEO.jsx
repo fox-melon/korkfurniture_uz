@@ -42,7 +42,7 @@ export default function SEO({ title }) {
         content='https://cdn.rasta.app/rasta/aef8208b-c6fc-4db9-878b-51544ab711be'
       /> */}
 
-      <link rel="icon" href="/f4.png" />
+      <link rel="icon" href="/favicon.svg" />
       {/* <link
         href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;600;700&display=swap'
         rel='stylesheet'

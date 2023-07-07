@@ -54,6 +54,7 @@
           padding: 18px 24px;
           font-size: 16px;
           outline: none;
+          font-family: "Montserrat", sans-serif;
           &::placeholder {
             font-size: 16px;
             color: #839797;
@@ -79,6 +80,7 @@
 
 @media (max-width: 768px) {
   .contact {
+    height: auto;
     .title {
       @include mixins.titleMobile;
     }
@@ -91,7 +93,7 @@
       .flex {
         flex-direction: column;
         .list {
-          padding: 32px;
+          padding: 0 32px;
           li {
             font-size: 14px;
             line-height: 17px;
@@ -101,7 +103,8 @@
           }
         }
         .form {
-          input {
+          padding-top: 24px;
+          input,textarea {
             padding: 12px 16px;
             font-size: 12px;
             &::placeholder {

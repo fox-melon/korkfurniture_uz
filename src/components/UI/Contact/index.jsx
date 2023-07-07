@@ -50,7 +50,7 @@ export default function Contact() {
 
   return (
     <div className={styles.contact} id="contact">
-      <h1 className={styles.title}>{t("contact")}</h1>
+      <h1 className={styles.title}>{t("contact_us")}</h1>
       <div className={styles.bg}>
         <Container>
           <div className={styles.flex}>

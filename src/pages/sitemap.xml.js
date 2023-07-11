@@ -1,20 +1,22 @@
 import fs from "fs";
 
-const Sitemap = () => { };
+const Sitemap = () => {};
 
 export const getServerSideProps = ({ res }) => {
   const baseUrl = "https://korkfurniture.uz";
   const languagePaths = ["/uz", "/ru", "en"];
-  console.log(process.cwd())
+  console.log(process.cwd());
   const staticRoutes = fs
     .readdirSync(`${process.cwd()}/src/pages`)
     .filter(
       (staticPage) =>
-        !["_app.js", "sitemap.xml.js", "404.js", "500.js", "index.js"].includes(
+        !["_app.js", "sitemap.xml.js", "404.js", "500.js", "api"].includes(
           staticPage
         )
     )
     .map((staticPagePath) => `/${staticPagePath?.replace(".js", "")}`);
+
+  console.log("staticRoutes", staticRoutes);
   const staticPagesWithLanguagePath = languagePaths.map((path) =>
     staticRoutes?.map((route) => `${baseUrl}${path}${route}`)
   );
@@ -22,8 +24,8 @@ export const getServerSideProps = ({ res }) => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${staticPages
-      .map(
-        (url) => `
+        .map(
+          (url) => `
             <url>
               <loc>${url}</loc>
               <lastmod>${new Date().toISOString()}</lastmod>
@@ -31,11 +33,11 @@ export const getServerSideProps = ({ res }) => {
               <priority>1.0</priority>
             </url>
           `
-      )
-      .join("")}
+        )
+        .join("")}
           ${staticPages
-      .map(
-        (url) => `
+            .map(
+              (url) => `
               <url>
                 <loc>${url}/uz</loc>
                 <lastmod>${new Date().toISOString()}</lastmod>
@@ -43,11 +45,11 @@ export const getServerSideProps = ({ res }) => {
                 <priority>1.0</priority>
               </url>
             `
-      )
-      .join("")}
+            )
+            .join("")}
               ${staticPages
-      .map(
-        (url) => `
+                .map(
+                  (url) => `
                 <url>
                   <loc>${url}/en</loc>
                   <lastmod>${new Date().toISOString()}</lastmod>
@@ -55,8 +57,8 @@ export const getServerSideProps = ({ res }) => {
                   <priority>1.0</priority>
                 </url>
               `
-      )
-      .join("")}
+                )
+                .join("")}
     </urlset>
   `;
 

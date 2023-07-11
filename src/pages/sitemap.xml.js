@@ -10,9 +10,14 @@ export const getServerSideProps = ({ res }) => {
     .readdirSync(`${process.cwd()}/src/pages`)
     .filter(
       (staticPage) =>
-        !["_app.js", "sitemap.xml.js", "404.js", "500.js", "api"].includes(
-          staticPage
-        )
+        ![
+          "_app.js",
+          "sitemap.xml.js",
+          "404.js",
+          "500.js",
+          "api",
+          "index.js",
+        ].includes(staticPage)
     )
     .map((staticPagePath) => `/${staticPagePath?.replace(".js", "")}`);
 

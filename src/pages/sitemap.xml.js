@@ -4,7 +4,7 @@ const Sitemap = () => {};
 
 export const getServerSideProps = ({ res }) => {
   const baseUrl = "https://korkfurniture.uz";
-  const languagePaths = ["/uz", "/ru", "en"];
+  const languagePaths = ["/uz", "/ru", "/en"];
   console.log(process.cwd());
   const staticRoutes = fs
     .readdirSync(`${process.cwd()}/src/pages`)

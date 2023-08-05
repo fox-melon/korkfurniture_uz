@@ -35,12 +35,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name:
-        uses: "google-github-actions/auth@v1"
+      - name: Execute command on remote server
+        uses: appleboy/ssh-action@v1.0.0
         with:
-          credentials_json: "${{ secrets.GCP_CREDS }}"
-      - name: "Set up Cloud SDK"
-        uses: "google-github-actions/setup-gcloud@v1"
-      - name: "gcloud"
-        run: |-
-          gcloud compute ssh ${{secrets.GCP_VM_USER}}@${{ secrets.VM_NAME }}  --zone=${{secrets.GCP_VM_ZONE}} --command="docker pull ${{secrets.DOCKER_REGISTRY}}/${{ github.event.repository.name }} && docker stop ${{ github.event.repository.name }} || true  && docker rm ${{ github.event.repository.name }} || true   && docker  run -itd --restart always -p ${{secrets.TEST_API_PORT}}:3000  --name ${{ github.event.repository.name }}  docker.quickweb.uz/${{ github.event.repository.name }}"
+          host: ${{secrets.SSH_HOST}}
+          username: ${{secrets.SSH_USER}}
+          password: ${{secrets.SSH_PASSWORD}}
+          script: docker pull ${{secrets.DOCKER_REGISTRY}}/${{ github.event.repository.name }} && docker stop ${{ github.event.repository.name }} || true  && docker rm ${{ github.event.repository.name }} || true   && docker  run -itd --restart always -p ${{secrets.TEST_API_PORT}}:3000  --name ${{ github.event.repository.name }}  docker.quickweb.uz/${{ github.event.repository.name }}

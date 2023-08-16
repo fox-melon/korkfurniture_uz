@@ -21,7 +21,6 @@ export async function getServerSideProps() {
 
   const projects = res.data?.data;
 
-  console.log(projects)
 
   return {
     props: {

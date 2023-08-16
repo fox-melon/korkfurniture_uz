@@ -2,14 +2,14 @@
 
 @mixin text {
   font-weight: 400;
-  font-size: rem(24);
-  line-height: rem(30);
+  font-size: rem(24, 24);
+  line-height: rem(30,30);
 }
 
 @mixin title {
   font-weight: 700;
-  font-size: rem(48);
-  line-height: rem(59);
+  font-size: rem(48,48);
+  line-height: rem(59, 59);
   text-align: center;
 }
 

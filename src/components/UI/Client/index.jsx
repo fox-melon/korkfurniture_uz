@@ -11,7 +11,7 @@ export default function Client() {
 
   useEffect(() => {
     axios
-      .get(`https://api.quickweb.uz/adfbddee-4ecb-4767-973c-fd3f16bd6ebd`)
+      .get(`https://api.quickweb.uz/9d8c8300-f5eb-488b-8b12-a9a56bc17d57`)
       .then((res) => setData(res?.data));
   }, []);
 
@@ -22,10 +22,7 @@ export default function Client() {
         {data ? (
           data?.data.map((item, index) => (
             <div className={styles.imgWrap} key={index}>
-              <img
-                src={item.logo || "/images/noImg2.jpg"}
-                alt="brand"
-              />
+              <img src={item.logo || "/images/noImg2.jpg"} alt="brand" />
             </div>
           ))
         ) : (
@@ -41,5 +38,4 @@ export default function Client() {
   );
 }
 
-
-//  || or no img 
+//  || or no img

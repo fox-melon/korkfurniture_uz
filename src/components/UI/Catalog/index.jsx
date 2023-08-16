@@ -30,7 +30,7 @@ export default function Catalog() {
               onChange={(e) => setPhone(e.target.value)}
             />
             <a
-              href="https://cdn.quickweb.uz/file/06067772-f43d-4474-9c06-a6bd7f62f696.pdf"
+              href="https://cdn.quickweb.uz/file/d240ffd9-85a6-424f-8bf3-9c5e462844cc.pdf"
               download="Kork Catalog"
               target="_blank"
               rel="noreferrer"

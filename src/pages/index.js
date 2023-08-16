@@ -16,10 +16,12 @@ export default function Home({ projects }) {
 export async function getServerSideProps() {
   // Call an external API endpoint to get posts
   const res = await axios.get(
-    "https://api.quickweb.uz/dd51e486-bb03-430b-95f2-75429accacff"
+    "https://api.quickweb.uz/fc8bf8ec-e396-4f61-8639-54028ced2255"
   );
 
   const projects = res.data?.data;
+
+  console.log(projects)
 
   return {
     props: {

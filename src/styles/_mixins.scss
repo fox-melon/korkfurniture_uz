@@ -15,23 +15,23 @@
 
 @mixin content {
   font-weight: 400;
-  font-size: rem(16);
-  line-height: rem(24);
+  font-size: rem(16, 16);
+  line-height: rem(24, 24);
 }
 @mixin contentMobile {
   font-weight: 400;
-  font-size: rem(14);
-  line-height: rem(21);
+  font-size: rem(14, 14);
+  line-height: rem(21,24);
 }
 
 @mixin textMobile {
   font-weight: 500;
-  font-size: rem(16);
-  line-height: rem(20);
+  font-size: rem(16,16);
+  line-height: rem(20, 20);
 }
 @mixin titleMobile {
   font-weight: 700;
-  font-size: rem(32);
-  line-height: rem(40);
+  font-size: rem(32,32);
+  line-height: rem(40, 32);
   text-align: center;
 }

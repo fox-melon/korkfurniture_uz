@@ -20,7 +20,7 @@ export default function RightMenu({ isOpen, setIsOpen = () => {} }) {
     return () => {
       router.events.off("routeChangeStart", handleRouteChange);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggleDrawer = () => (event) => {
@@ -63,9 +63,9 @@ export default function RightMenu({ isOpen, setIsOpen = () => {} }) {
               {t("contact")}
             </a>
           </div>
-          <a href="tel:+998901234567" className={styles.phone}>
+          <a href="tel:+998983100054" className={styles.phone}>
             <PhoneIcon />
-            <p>{"+998 (90) 123-45-67"}</p>
+            <p>{"+998 (98) 310-00-54"}</p>
           </a>
         </div>
       </div>

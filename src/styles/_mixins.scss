@@ -2,36 +2,36 @@
 
 @mixin text {
   font-weight: 400;
-  font-size: rem(24, 0);
-  line-height: rem(30,0);
+  font-size: rem(24);
+  line-height: rem(30);
 }
 
 @mixin title {
   font-weight: 700;
-  font-size: rem(48,0);
-  line-height: rem(59, 0);
+  font-size: rem(48);
+  line-height: rem(59);
   text-align: center;
 }
 
 @mixin content {
   font-weight: 400;
-  font-size: rem(16, 0);
-  line-height: rem(24, 0);
+  font-size: rem(16);
+  line-height: rem(24);
 }
 @mixin contentMobile {
   font-weight: 400;
-  font-size: rem(14, 0);
-  line-height: rem(21,0);
+  font-size: rem(14);
+  line-height: rem(21);
 }
 
 @mixin textMobile {
   font-weight: 500;
   font-size: rem(16,0);
-  line-height: rem(20, 0);
+  line-height: rem(20);
 }
 @mixin titleMobile {
   font-weight: 700;
-  font-size: rem(32,0);
-  line-height: rem(40, 0);
+  font-size: rem(32);
+  line-height: rem(40);
   text-align: center;
 }

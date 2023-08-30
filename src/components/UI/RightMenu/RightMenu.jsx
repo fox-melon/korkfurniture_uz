@@ -63,9 +63,9 @@ export default function RightMenu({ isOpen, setIsOpen = () => {} }) {
               {t("contact")}
             </a>
           </div>
-          <a href="tel:+998983100054" className={styles.phone}>
+          <a href="tel:+998951646464" className={styles.phone}>
             <PhoneIcon />
-            <p>{"+998 (98) 310-00-54"}</p>
+            <p>{"+998 (95) 164-64-64"}</p>
           </a>
         </div>
       </div>

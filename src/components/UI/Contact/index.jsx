@@ -31,8 +31,8 @@ export default function Contact() {
     {
       id: 1,
       src: "/images/phoneWhite.svg",
-      text: "+998 (98) 310-00-64",
-      href: "tel:+998983100064",
+      text: "+998 (95) 164-64-64",
+      href: "tel:+998951646464",
     },
     {
       id: 2,
